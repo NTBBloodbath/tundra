@@ -18,7 +18,7 @@
   };
 
   outputs = { nixpkgs, nix-flatpak, ghostty, ... } @ inputs: {
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.tundra = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = { inherit inputs; };
       modules = [

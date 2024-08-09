@@ -2,7 +2,7 @@
 
 {
   # System hostname
-  networking.hostName = "nixos";
+  networking.hostName = "tundra";
 
   # Bootloader
   boot = {
