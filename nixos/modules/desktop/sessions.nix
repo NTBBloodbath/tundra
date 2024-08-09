@@ -1,50 +1,44 @@
 { config, lib, pkgs, ... }:
 
 {
-  options = {
-    sessions.enable = lib.mkEnableOption "enable sessions";
-  };
+  services.xserver = {
+    # Enable the X11 windowing system
+    enable = true;
+    videoDrivers = [ "amdgpu" ];
 
-  config = lib.mkIf config.sessions.enable {
-    services.xserver = {
-      # Enable the X11 windowing system
-      enable = true;
-      videoDrivers = [ "amdgpu" ];
-
-      # Configure keymap in X11
-      xkb = {
-        layout = "latam";
-        variant = "";
-      };
-
-      # Enable the GNOME Desktop Environment
-      displayManager.gdm.enable = true;
-      desktopManager.gnome.enable = true;
-
-      # Disable XTerm
-      desktopManager.xterm.enable = false;
+    # Configure keymap in X11
+    xkb = {
+      layout = "latam";
+      variant = "";
     };
 
-    # Exclude certain packages from GNOME
-    environment.gnome.excludePackages = with pkgs; [
-      gnome-tour # GNOME guide
-      epiphany   # web browser
-      geary      # email reader
-    ];
+    # Enable the GNOME Desktop Environment
+    displayManager.gdm.enable = true;
+    desktopManager.gnome.enable = true;
 
-    # GNOME Extensions
-    environment.systemPackages = with pkgs.gnomeExtensions; [
-      freon                    # Monitor temps, voltage and fan RPM
-      forge                    # Tiling window manager
-      caffeine                 # Do not sleep
-      appindicator             # Tray icons
-      blur-my-shell            # Add blur effect
-      removable-drive-menu     # Mount/Unmount removable devices
-      dash-to-dock             # Convert the dash into a macOS style dock
-      gamemode-shell-extension # gamemode indicator
-    ];
-
-    # Enable gnome-settings-daemon udev rules to make sure tray works well
-    services.udev.packages = [ pkgs.gnome.gnome-settings-daemon ];
+    # Disable XTerm
+    desktopManager.xterm.enable = false;
   };
+
+  # Exclude certain packages from GNOME
+  environment.gnome.excludePackages = with pkgs; [
+    gnome-tour # GNOME guide
+    epiphany   # web browser
+    geary      # email reader
+  ];
+
+  # GNOME Extensions
+  environment.systemPackages = with pkgs.gnomeExtensions; [
+    freon                    # Monitor temps, voltage and fan RPM
+    forge                    # Tiling window manager
+    caffeine                 # Do not sleep
+    appindicator             # Tray icons
+    blur-my-shell            # Add blur effect
+    removable-drive-menu     # Mount/Unmount removable devices
+    dash-to-dock             # Convert the dash into a macOS style dock
+    gamemode-shell-extension # gamemode indicator
+  ];
+
+  # Enable gnome-settings-daemon udev rules to make sure tray works well
+  services.udev.packages = [ pkgs.gnome.gnome-settings-daemon ];
 }
