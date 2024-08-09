@@ -38,7 +38,7 @@
   ]) ++ (with pkgs.fishPlugins; [
     fzf
     bass
-    tide
+    pure
     autopair
     colored-man-pages
   ]);
