@@ -26,14 +26,13 @@
     # sysrq_always_enabled=1                 | In case something freezes the system, makes the Magic Sysrq Key work
     # cpufreq.default_governor=performance   | Set CPU governor to performance
     kernelParams = [ "rw" "quiet" "rd.systemd.show_status=auto" "splash" "sysrq_always_enabled=1" "cpufreq.default_governor=performance" ];
-    supportedFilesystems = [ "ntfs" ];
   };
 
   # Mount my external FireCuda drive
   fileSystems."/mnt/Juegos" = {
     device = "/dev/disk/by-label/Juegos";
-    fsType = "ntfs";
-    options = [ "nofail" "uid=1000" "gid=100" "rw" "user" "exec" "umask=000" ];
+    fsType = "ext4";
+    options = [ "nofail" "x-systemd.device-timeout=5" "rw" "relatime" "user" "exec" "data=writeback" "nobh" ];
   };
 
   # Configure console (TTY) keymap
