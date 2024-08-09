@@ -16,7 +16,8 @@
     # Enable Android Debug Bridge
     programs.adb.enable = true;
 
-    environment.systemPackages = with pkgs; [
+    # Install system-wide packages (+ FISH shell plugins)
+    environment.systemPackages = (with pkgs; [
       # Essentials
       git
       fish
@@ -37,7 +38,13 @@
       lua51Packages.luarocks
       # Misc
       fastfetch
-    ];
+    ]) ++ (with pkgs.fishPlugins; [
+      fzf
+      bass
+      tide
+      autopair
+      colored-man-pages
+    ]);
 
     # Initialize FISH from BASH without replacing the default shell
     programs.bash = {
