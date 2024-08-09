@@ -28,6 +28,7 @@
     btop
     wget
     ripgrep
+    tealdeer
     smartmontools
     # Lua (required by Neovim to use rocks.nvim)
     lua51Packages.lua
