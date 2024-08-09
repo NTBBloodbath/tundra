@@ -32,7 +32,7 @@
   fileSystems."/mnt/Juegos" = {
     device = "/dev/disk/by-label/Juegos";
     fsType = "ext4";
-    options = [ "nofail" "x-systemd.device-timeout=5" "defaults" "noatime" "data=writeback" "nobh" ];
+    options = [ "nofail" "x-systemd.device-timeout=5" "rw" "user" "exec" "relatime" "data=writeback" "nobh" "async" ];
   };
 
   # Configure console (TTY) keymap
