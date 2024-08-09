@@ -1,8 +1,8 @@
 # Tundra
 
 A wise man once said "never say never", but the fool didn't understand and went on his way.
-Later, the fool discovered his enormous masochism and tripped on the stone he always said he would
-never trip on. And that's how I ended up becoming a NixOS user.
+Later, the fool discovered his enormous masochism by tripping over the stone he always said he would
+never trip over. And that's how I ended up becoming a NixOS user.
 
 > [!NOTE]
 > The name of my dotfiles comes from the [Minecraft Tundra biome](https://minecraft.wiki/w/Tundra).
