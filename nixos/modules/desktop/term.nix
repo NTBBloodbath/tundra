@@ -33,6 +33,7 @@
       btop
       wget
       ripgrep
+      smartmontools
       # Lua (required by Neovim to use rocks.nvim)
       lua51Packages.lua
       lua51Packages.luarocks
