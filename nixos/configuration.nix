@@ -11,9 +11,6 @@
       ./../hosts/workstation/hardware-configuration.nix
     ];
 
-  # Enable flatpak
-  services.flatpak.enable = true;
-
   # Enable OpenGL and hardware accelerated graphics drivers
   hardware.graphics = {
     enable = true;
