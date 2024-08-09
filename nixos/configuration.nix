@@ -8,7 +8,7 @@
   imports =
     [
       ./games.nix
-      /etc/nixos/hardware-configuration.nix
+      ./../hosts/workstation/hardware-configuration.nix
     ];
 
   # Bootloader
@@ -30,10 +30,9 @@
     # quiet                                  | shut up Linux
     # rd.systemd.show_status=auto            | shut up SystemD
     # splash                                 | show a nice splash art while loading
-    # scsi_mod.use_blk_mq=1                  | Optimize I/O schedulers for SSD usage
     # sysrq_always_enabled=1                 | In case something freezes the system, makes the Magic Sysrq Key work
     # cpufreq.default_governor=performance   | Set CPU governor to performance
-    kernelParams = [ "rw" "quiet" "rd.systemd.show_status=auto" "splash" "scsi_mod.use_blk_mq=1" "sysrq_always_enabled=1" "cpufreq.default_governor=performance" ];
+    kernelParams = [ "rw" "quiet" "rd.systemd.show_status=auto" "splash" "sysrq_always_enabled=1" "cpufreq.default_governor=performance" ];
     supportedFilesystems = [ "ntfs" ];
   };
 
