@@ -34,13 +34,14 @@
 
     # GNOME Extensions
     environment.systemPackages = with pkgs.gnomeExtensions; [
-      freon                # Monitor temps, voltage and fan RPM
-      forge                # Tiling window manager
-      caffeine             # Do not sleep
-      appindicator         # Tray icons
-      blur-my-shell        # Add blur effect
-      removable-drive-menu # Mount/Unmount removable devices
-      dash-to-dock         # Convert the dash into a macOS style dock
+      freon                    # Monitor temps, voltage and fan RPM
+      forge                    # Tiling window manager
+      caffeine                 # Do not sleep
+      appindicator             # Tray icons
+      blur-my-shell            # Add blur effect
+      removable-drive-menu     # Mount/Unmount removable devices
+      dash-to-dock             # Convert the dash into a macOS style dock
+      gamemode-shell-extension # gamemode indicator
     ];
 
     # Enable gnome-settings-daemon udev rules to make sure tray works well
