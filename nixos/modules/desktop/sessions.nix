@@ -12,8 +12,10 @@
       videoDrivers = [ "amdgpu" ];
 
       # Configure keymap in X11
-      layout = "latam";
-      xkbVariant = "";
+      xkb = {
+        layout = "latam";
+        variant = "";
+      };
 
       # Enable the GNOME Desktop Environment
       displayManager.gdm.enable = true;
