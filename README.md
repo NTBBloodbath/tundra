@@ -29,8 +29,13 @@ First, create a hardware configuration for your system:
 sudo nixos-generate-config
 ```
 
-After you have created a `/etc/nixos/hardware-configuration.nix` file, build the configuration with:
+After you have created a `/etc/nixos/hardware-configuration.nix` file, copy it to the repository and
+then proceed to build the configuration with:
 ```sh
+# Change workstation to whatever you want if you are using my setup
+# if you do, remember to also modify the module import path in the flake.nix
+cp /etc/nixos/hardware-configuration.nix ./hosts/workstation/
+
 sudo nixos-rebuild switch --flake .
 ```
 
