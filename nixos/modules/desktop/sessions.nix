@@ -26,10 +26,24 @@
     };
 
     # Exclude certain packages from GNOME
-    environment.gnome.excludePackages = (with pkgs; [
+    environment.gnome.excludePackages = with pkgs; [
       gnome-tour # GNOME guide
-      epiphany  # web browser
+      epiphany   # web browser
       geary      # email reader
-    ]);
+    ];
+
+    # GNOME Extensions
+    environment.systemPackages = with pkgs.gnomeExtensions; [
+      freon                # Monitor temps, voltage and fan RPM
+      forge                # Tiling window manager
+      caffeine             # Do not sleep
+      appindicator         # Tray icons
+      blur-my-shell        # Add blur effect
+      removable-drive-menu # Mount/Unmount removable devices
+      dash-to-dock         # Convert the dash into a macOS style dock
+    ];
+
+    # Enable gnome-settings-daemon udev rules to make sure tray works well
+    services.udev.packages = [ pkgs.gnome.gnome-settings-daemon ];
   };
 }
