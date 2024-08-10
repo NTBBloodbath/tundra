@@ -1,6 +1,8 @@
-{ config, lib, ... }:
-
 {
+  config,
+  lib,
+  ...
+}: {
   # Enable networking
   networking.networkmanager.enable = true;
 

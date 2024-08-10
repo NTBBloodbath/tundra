@@ -1,6 +1,9 @@
-{ config, lib, pkgs, ... }:
-
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   # Enable flatpak
   services.flatpak.enable = true;
 
@@ -12,10 +15,10 @@
 
   # Flatpak applications
   services.flatpak.packages = [
-    "im.riot.Riot"                                               # Element
-    "com.spotify.Client"                                         # Spotify
-    "com.github.tchx84.Flatseal"                                 # Manage flatpak permissions
-    "com.usebottles.bottles"                                     # Wine gaming my beloved
+    "im.riot.Riot" # Element
+    "com.spotify.Client" # Spotify
+    "com.github.tchx84.Flatseal" # Manage flatpak permissions
+    "com.usebottles.bottles" # Wine gaming my beloved
     "org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/23.08" # MangoHud for Bottles
   ];
 }

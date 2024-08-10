@@ -1,6 +1,9 @@
-{ config, lib, pkgs, ... }:
-
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions
   programs.gnupg.agent = {
@@ -19,36 +22,38 @@
   };
 
   # Install system-wide packages (+ FISH shell plugins)
-  environment.systemPackages = (with pkgs; [
-    # Essentials
-    git
-    fish
-    # Archives
-    zip
-    unzip
-    rar
-    unrar
-    # Utilities
-    fd
-    eza
-    fzf
-    btop
-    wget
-    ripgrep
-    tealdeer
-    smartmontools
-    # Lua (required by Neovim to use rocks.nvim)
-    lua51Packages.lua
-    lua51Packages.luarocks
-    # Misc
-    fastfetch
-  ]) ++ (with pkgs.fishPlugins; [
-    fzf
-    bass
-    pure
-    autopair
-    colored-man-pages
-  ]);
+  environment.systemPackages =
+    (with pkgs; [
+      # Essentials
+      git
+      fish
+      # Archives
+      zip
+      unzip
+      rar
+      unrar
+      # Utilities
+      fd
+      eza
+      fzf
+      btop
+      wget
+      ripgrep
+      tealdeer
+      smartmontools
+      # Lua (required by Neovim to use rocks.nvim)
+      lua51Packages.lua
+      lua51Packages.luarocks
+      # Misc
+      fastfetch
+    ])
+    ++ (with pkgs.fishPlugins; [
+      fzf
+      bass
+      pure
+      autopair
+      colored-man-pages
+    ]);
 
   # Initialize FISH from BASH without replacing the default shell
   programs.bash = {

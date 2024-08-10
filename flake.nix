@@ -17,10 +17,15 @@
     };
   };
 
-  outputs = { nixpkgs, nix-flatpak, ghostty, ... } @ inputs: {
+  outputs = {
+    nixpkgs,
+    nix-flatpak,
+    ghostty,
+    ...
+  } @ inputs: {
     nixosConfigurations.tundra = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
-      specialArgs = { inherit inputs; };
+      specialArgs = {inherit inputs;};
       modules = [
         nix-flatpak.nixosModules.nix-flatpak
         ./nixos/configuration.nix

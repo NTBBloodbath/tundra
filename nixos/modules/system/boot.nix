@@ -1,6 +1,8 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   # System hostname
   networking.hostName = "tundra";
 
@@ -16,7 +18,7 @@
       };
     };
     plymouth.enable = true;
-    initrd.kernelModules = [ "amdgpu" ];
+    initrd.kernelModules = ["amdgpu"];
     # KERNEL PARAMETER                       | Parameter description
     # ---------------------------------------+---------------------------------------------------------------------------------------
     # rw                                     | mounts root read/write
@@ -25,14 +27,14 @@
     # splash                                 | show a nice splash art while loading
     # sysrq_always_enabled=1                 | In case something freezes the system, makes the Magic Sysrq Key work
     # cpufreq.default_governor=performance   | Set CPU governor to performance
-    kernelParams = [ "rw" "quiet" "rd.systemd.show_status=auto" "splash" "sysrq_always_enabled=1" "cpufreq.default_governor=performance" ];
+    kernelParams = ["rw" "quiet" "rd.systemd.show_status=auto" "splash" "sysrq_always_enabled=1" "cpufreq.default_governor=performance"];
   };
 
   # Mount my external FireCuda drive
   fileSystems."/mnt/Juegos" = {
     device = "/dev/disk/by-label/Juegos";
     fsType = "ext4";
-    options = [ "nofail" "x-systemd.device-timeout=5" "rw" "user" "exec" "relatime" "data=writeback" "nobh" ];
+    options = ["nofail" "x-systemd.device-timeout=5" "rw" "user" "exec" "relatime" "data=writeback" "nobh"];
   };
 
   # Configure console (TTY) keymap

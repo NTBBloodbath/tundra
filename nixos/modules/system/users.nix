@@ -1,11 +1,14 @@
-{ config, inputs, pkgs, ... }:
-
 {
+  config,
+  inputs,
+  pkgs,
+  ...
+}: {
   users.users = {
     amartin = {
       isNormalUser = true;
       description = "Alejandro Martin";
-      extraGroups = [ "networkmanager" "wheel" "adbusers" ];
+      extraGroups = ["networkmanager" "wheel" "adbusers"];
       openssh.authorizedKeys.keys = [
         # TODO: Add my SSH public key here
       ];

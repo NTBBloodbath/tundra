@@ -1,6 +1,8 @@
-{ config, lib, ... }:
-
 {
+  config,
+  lib,
+  ...
+}: {
   # Set your time zone
   time.timeZone = "America/Caracas";
 

@@ -1,15 +1,16 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’)
-
-{ config, pkgs, inputs, ... }:
-
 {
-  imports =
-    [
-      ./modules
-      ./../hosts/workstation/hardware-configuration.nix
-    ];
+  config,
+  pkgs,
+  inputs,
+  ...
+}: {
+  imports = [
+    ./modules
+    ./../hosts/workstation/hardware-configuration.nix
+  ];
 
   # Enable OpenGL and hardware accelerated graphics drivers
   hardware.graphics = {
@@ -33,7 +34,7 @@
       # https://nixos.org/manual/nix/stable/command-ref/conf-file.html#conf-auto-optimise-store
       auto-optimise-store = true;
       # Set up Nix experimental features
-      experimental-features = [ "nix-command" "flakes" ];
+      experimental-features = ["nix-command" "flakes"];
     };
   };
 }

@@ -1,6 +1,8 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   # Install Neovim and set it as the default $EDITOR
   programs.neovim = {
     enable = true;
