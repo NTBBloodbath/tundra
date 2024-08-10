@@ -11,6 +11,13 @@
   # Enable Android Debug Bridge
   programs.adb.enable = true;
 
+  # Enable direnv integration (+ nix-direnv)
+  programs.direnv = {
+    enable = true;
+    silent = true; # direnv is way too verbose
+    nix-direnv.enable = true;
+  };
+
   # Install system-wide packages (+ FISH shell plugins)
   environment.systemPackages = (with pkgs; [
     # Essentials
