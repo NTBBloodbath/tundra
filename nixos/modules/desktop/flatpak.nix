@@ -16,6 +16,7 @@
   # Flatpak applications
   services.flatpak.packages = [
     "im.riot.Riot" # Element
+    "com.obsproject.Studio" # OBS
     "com.spotify.Client" # Spotify
     "com.github.tchx84.Flatseal" # Manage flatpak permissions
     "com.usebottles.bottles" # Wine gaming my beloved
