@@ -40,6 +40,7 @@
     removable-drive-menu # Mount/Unmount removable devices
     dash-to-dock # Convert the dash into a macOS style dock
     gamemode-shell-extension # gamemode indicator
+    quick-settings-audio-panel # audio panel
   ];
 
   # Enable gnome-settings-daemon udev rules to make sure tray works well
