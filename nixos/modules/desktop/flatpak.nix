@@ -19,6 +19,7 @@
     "com.obsproject.Studio" # OBS
     "com.spotify.Client" # Spotify
     "com.github.tchx84.Flatseal" # Manage flatpak permissions
+    "io.freetubeapp.FreeTube" # The private youtube client
     "com.usebottles.bottles" # Wine gaming my beloved
     "org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/23.08" # MangoHud for Bottles
   ];
