@@ -13,7 +13,8 @@
         # TODO: Add my SSH public key here
       ];
       packages = with pkgs; [
-        # Terminal emulator
+        # Terminal emulators
+        kitty # required to get the kitten utility to display images on Ghostty
         inputs.ghostty.packages."${pkgs.system}".default
         # Utilities
         hyperfine

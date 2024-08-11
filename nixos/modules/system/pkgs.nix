@@ -4,10 +4,10 @@
   ...
 }: {
   # Install Neovim and set it as the default $EDITOR
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-  };
+  # programs.neovim = {
+  #   enable = true;
+  #   defaultEditor = true;
+  # };
 
   nixpkgs = {
     overlays = [
