@@ -22,6 +22,8 @@
         gnome-tweaks
         # Social
         vesktop
+        # Misc
+        godot_4
       ];
     };
   };
