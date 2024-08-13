@@ -11,6 +11,7 @@
   };
 
   environment.systemPackages = with pkgs; [
-    bottles
+    lact # AMDGPU Controller
+    bottles # Wine gaming my beloved
   ];
 }
