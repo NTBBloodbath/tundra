@@ -9,4 +9,8 @@
     enable = true;
     package = pkgs.firefox-devedition-bin;
   };
+
+  environment.systemPackages = with pkgs; [
+    bottles
+  ];
 }
