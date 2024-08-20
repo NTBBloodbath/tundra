@@ -1,4 +1,7 @@
 font-family = CartographCF Nerd Font Mono
+# font-family-bold = SFMono Nerd Font
+# font-family-italic = CartographCF Nerd Font Mono
+# font-family-bold-italic = CartographCF Nerd Font Mono
 
 # Font size in points. This value can be a non-integer and the nearest integer
 # pixel size will be selected. If you have a high dpi display where 1pt = 2px
@@ -37,7 +40,7 @@ cursor-invert-fg-bg = true
 # or greater than 1 will be clamped to the nearest valid value. Note that a
 # sufficiently small value such as 0.3 may be effectively invisible and may
 # make it difficult to find the cursor.
-cursor-opacity = 0.8
+cursor-opacity = 1
 
 # The style of the cursor. This sets the default style. A running program can
 # still request an explicit cursor style using escape sequences (such as `CSI
@@ -226,7 +229,7 @@ keybind = alt+seven=goto_tab:7
 window-padding-x = 0
 window-padding-y = 0
 window-padding-balance = true
-#window-padding-color = extend
+window-padding-color = extend
 
 window-inherit-working-directory = true
 window-inherit-font-size = true
