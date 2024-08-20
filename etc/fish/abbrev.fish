@@ -109,41 +109,43 @@ end
 
 # Gentoo environment {{{
 #
-# Gentoo's env-update is not compatible with fish so we are using bass to deal with it
-abbr -a env_update "sudo env-update && bass source /etc/profile"
+if test (cat /etc/os-release | grep -E "^NAME" | awk -F= '{ print $2 }') = "Gentoo"
+   # Gentoo's env-update is not compatible with fish so we are using bass to deal with it
+   abbr -a env_update "sudo env-update && bass source /etc/profile"
 
-# Synchronize repositories
-abbr -a esync "sudo emerge --sync"
+   # Synchronize repositories
+   abbr -a esync "sudo emerge --sync"
 
-# Search package from repositories
-abbr -a esearch "sudo emerge --search --searchdesc"
+   # Search package from repositories
+   abbr -a esearch "sudo emerge --search --searchdesc"
 
-# Search package from installed @world packages in Gentoo
-abbr -a esearchinst --set-cursor=! "eix -c --world | sed \"s/\s(.*)//\" | rg \"!\""
+   # Search package from installed @world packages in Gentoo
+   abbr -a esearchinst --set-cursor=! "eix -c --world | sed \"s/\s(.*)//\" | rg \"!\""
 
-# Install a new package
-abbr -a einstall "sudo emerge --ask"
+   # Install a new package
+   abbr -a einstall "sudo emerge --ask"
 
-# Temporarily install a new package (do not add it to @world)
-abbr -a einstalltmp "sudo emerge --ask --oneshot"
+   # Temporarily install a new package (do not add it to @world)
+   abbr -a einstalltmp "sudo emerge --ask --oneshot"
 
-# Remove package
-abbr -a eremove --set-cursor=! "sudo emerge --deselect ! && sudo emerge --ask --depclean"
+   # Remove package
+   abbr -a eremove --set-cursor=! "sudo emerge --deselect ! && sudo emerge --ask --depclean"
 
-# Update packages (new USE)
-abbr -a eupnew "sudo emerge --ask --update --newuse --deep @world"
+   # Update packages (new USE)
+   abbr -a eupnew "sudo emerge --ask --update --newuse --deep @world"
 
-# Update packages (changed USE)
-abbr -a eupch "sudo emerge --ask --quiet --update --changed-use --deep @world"
+   # Update packages (changed USE)
+   abbr -a eupch "sudo emerge --ask --quiet --update --changed-use --deep @world"
 
-# Update system
-abbr -a eup "sudo emerge --ask --update --newuse --deep @world"
+   # Update system
+   abbr -a eup "sudo emerge --ask --update --newuse --deep @world"
 
-# Get update ETA
-abbr -a eupeta "sudo emerge --pretend --update --newuse --deep @world | sudo genlop -p"
+   # Get update ETA
+   abbr -a eupeta "sudo emerge --pretend --update --newuse --deep @world | sudo genlop -p"
 
-# Get current packages compilation ETA
-abbr -a ebuildeta "sudo genlop -c"
+   # Get current packages compilation ETA
+   abbr -a ebuildeta "sudo genlop -c"
+end
 # }}}
 
 # vim: sw=3:ts=3:sts=3:ft=fish:fdm=marker:fdl=0
