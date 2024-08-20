@@ -17,6 +17,7 @@
         kitty # required to get the kitten utility to display images on Ghostty
         inputs.ghostty.packages."${pkgs.system}".default
         # Utilities
+        jujutsu
         hyperfine
         wl-clipboard
         gnome-tweaks
