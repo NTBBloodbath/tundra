@@ -26,6 +26,9 @@
       options = "--delete-older-than 1w";
     };
 
+    # Automatically run the nix store optimiser by using a systemd timer
+    optimise.automatic = true;
+
     settings = {
       # Deduplicate and optimize storage
       # You can also manually optimize the store via:
