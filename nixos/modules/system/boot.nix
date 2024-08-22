@@ -19,15 +19,25 @@
     };
     plymouth.enable = true;
     initrd.kernelModules = ["amdgpu"];
+    kernelPackages = pkgs.linuxPackages_latest;
     # KERNEL PARAMETER                       | Parameter description
     # ---------------------------------------+---------------------------------------------------------------------------------------
-    # rw                                     | mounts root read/write
-    # quiet                                  | shut up Linux
-    # rd.systemd.show_status=auto            | shut up SystemD
-    # splash                                 | show a nice splash art while loading
+    # rw                                     | Mounts root read/write
+    # quiet                                  | Shut up Linux
+    # rd.systemd.show_status=auto            | Shut up SystemD
+    # splash                                 | Show a nice splash art while loading
     # sysrq_always_enabled=1                 | In case something freezes the system, makes the Magic Sysrq Key work
     # cpufreq.default_governor=performance   | Set CPU governor to performance
-    kernelParams = ["rw" "quiet" "rd.systemd.show_status=auto" "splash" "sysrq_always_enabled=1" "cpufreq.default_governor=performance"];
+    # amdgpu.ppfeaturemask=0xffffffff        | Unlock access to overclocking my AMD GPU
+    kernelParams = [
+      "rw"
+      "quiet"
+      "splash"
+      "rd.systemd.show_status=auto"
+      "sysrq_always_enabled=1"
+      "cpufreq.default_governor=performance"
+      "amdgpu.ppfeaturemask=0xffffffff"
+    ];
   };
 
   # Mount my external FireCuda drive
