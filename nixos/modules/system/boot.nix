@@ -26,8 +26,8 @@
       };
     };
     plymouth.enable = true;
-    extraModulePackages = with pkgs.linuxPackages_latest; [ zenpower ];
-    initrd.kernelModules = ["amdgpu" "zenpower"];
+    extraModulePackages = with pkgs.linuxPackages_latest; [ryzen-smu zenpower];
+    initrd.kernelModules = ["amdgpu" "zenpower" "ryzen-smu"];
     blacklistedKernelModules = ["k10temp"]; # Required by zenpower
     kernelPackages = pkgs.linuxPackages_latest;
     # KERNEL PARAMETER                       | Parameter description
