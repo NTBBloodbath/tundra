@@ -25,6 +25,7 @@
         vesktop
         # Misc
         godot_4
+        mangohud
       ];
     };
   };
