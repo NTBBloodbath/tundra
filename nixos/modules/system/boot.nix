@@ -1,10 +1,18 @@
 {
-  config,
   pkgs,
   ...
 }: {
   # System hostname
   networking.hostName = "tundra";
+
+  # Extra hardware configurations
+  #
+  # Enable ryzen_smu kernel driver
+  hardware.cpu.amd.ryzen-smu.enable = true;
+
+  # Load amdgpu in stage1, fixes lower resolution in boot screen
+  # during the initramfs phase
+  hardware.amdgpu.initrd.enable = true;
 
   # Bootloader
   boot = {
@@ -18,7 +26,9 @@
       };
     };
     plymouth.enable = true;
-    initrd.kernelModules = ["amdgpu"];
+    extraModulePackages = with pkgs.linuxPackages_latest; [ zenpower ];
+    initrd.kernelModules = ["amdgpu" "zenpower"];
+    blacklistedKernelModules = ["k10temp"]; # Required by zenpower
     kernelPackages = pkgs.linuxPackages_latest;
     # KERNEL PARAMETER                       | Parameter description
     # ---------------------------------------+---------------------------------------------------------------------------------------
@@ -29,6 +39,7 @@
     # sysrq_always_enabled=1                 | In case something freezes the system, makes the Magic Sysrq Key work
     # cpufreq.default_governor=performance   | Set CPU governor to performance
     # amdgpu.ppfeaturemask=0xffffffff        | Unlock access to overclocking my AMD GPU
+    # amd_pstate=active                      | Enables the AMD cpu scaling, allowing my Ryzen to be more energy efficient
     kernelParams = [
       "rw"
       "quiet"
@@ -37,6 +48,7 @@
       "sysrq_always_enabled=1"
       "cpufreq.default_governor=performance"
       "amdgpu.ppfeaturemask=0xffffffff"
+      "amd_pstate=active"
     ];
   };
 
