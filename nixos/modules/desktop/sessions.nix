@@ -29,7 +29,7 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    # GNOME Extensions
+    # --- GNOME Extensions
     gnomeExtensions.freon # Monitor temps, voltage and fan RPM
     gnomeExtensions.forge # Tiling window manager
     gnomeExtensions.caffeine # Do not sleep
@@ -40,7 +40,7 @@
     gnomeExtensions.gamemode-shell-extension # gamemode indicator
     gnomeExtensions.quick-settings-audio-panel # audio panel
   ] ++ [
-    # Hyprland add-ons
+    # --- Hyprland add-ons
     hypridle # Idle daemon
     hyprnome # GNOME-like workspace switching
     hyprshot # Wrapper around grim + slurp for convenience
@@ -52,6 +52,9 @@
     playerctl # Control audio
     swaynotificationcenter # Notification daemon and center
     wlogout # Logout menu
+    # swayosd # GNOME-like OSD
+    # --- Hyprland plugins
+    hyprlandPlugins.hyprexpo # Overview plugin like GNOME/KDE
   ];
 
   # Enable gnome-settings-daemon udev rules to make sure tray works well
