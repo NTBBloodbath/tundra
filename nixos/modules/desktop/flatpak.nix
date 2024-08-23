@@ -22,5 +22,6 @@
     "io.freetubeapp.FreeTube" # The private youtube client
     "com.orama_interactive.Pixelorama" # Pixel art editor
     # "org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/23.08" # MangoHud for Bottles
+    "io.github.Foldex.AdwSteamGtk" # Steam <3 Adwaita
   ];
 }
