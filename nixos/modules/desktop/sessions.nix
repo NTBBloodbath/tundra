@@ -54,7 +54,8 @@
     wlogout # Logout menu
     # swayosd # GNOME-like OSD
     # --- Hyprland plugins
-    hyprlandPlugins.hyprexpo # Overview plugin like GNOME/KDE
+    # See https://github.com/KZDKM/Hyprspace/issues/79
+    # hyprlandPlugins.hyprspace
   ];
 
   # Enable gnome-settings-daemon udev rules to make sure tray works well
