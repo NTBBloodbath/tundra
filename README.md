@@ -42,6 +42,29 @@ sudo nixos-rebuild switch --flake .
 Once everything is ready, move the contents of the `etc` directory to `~/.config` and the `share`
 directory to `~/.local/share`. And that's it :)
 
+## Showcase
+
+<details>
+<summary>Desktop view</summary>
+
+![desktop](https://github.com/user-attachments/assets/9617013a-9223-4af8-8325-523d808d89e0)
+
+</details>
+
+<details>
+<summary>Logout screen (wlogout)</summary>
+
+![wlogout](https://github.com/user-attachments/assets/b1830c65-ac56-45e2-a5f8-514ec3c16eec)
+
+</details>
+
+<details>
+<summary>Lockscreen (hyprlock)</summary>
+
+![hyprlock](https://github.com/user-attachments/assets/7b29b61b-30c7-486a-9924-018f0a4b595c)
+
+</details>
+
 ## License
 
 My dotfiles are licensed under the ~cuck~ MIT license. Feel free to take inspiration or take parts
