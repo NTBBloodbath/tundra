@@ -40,6 +40,7 @@
       wget
       ripgrep
       tealdeer
+      lm_sensors
       smartmontools
       # Lua (required by Neovim to use rocks.nvim)
       lua51Packages.lua

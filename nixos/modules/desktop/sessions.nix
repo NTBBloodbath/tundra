@@ -1,6 +1,4 @@
 {
-  config,
-  lib,
   pkgs,
   ...
 }: {
@@ -30,19 +28,35 @@
     geary # email reader
   ];
 
-  # GNOME Extensions
-  environment.systemPackages = with pkgs.gnomeExtensions; [
-    freon # Monitor temps, voltage and fan RPM
-    forge # Tiling window manager
-    caffeine # Do not sleep
-    appindicator # Tray icons
-    blur-my-shell # Add blur effect
-    removable-drive-menu # Mount/Unmount removable devices
-    dash-to-dock # Convert the dash into a macOS style dock
-    gamemode-shell-extension # gamemode indicator
-    quick-settings-audio-panel # audio panel
+  environment.systemPackages = with pkgs; [
+    # GNOME Extensions
+    gnomeExtensions.freon # Monitor temps, voltage and fan RPM
+    gnomeExtensions.forge # Tiling window manager
+    gnomeExtensions.caffeine # Do not sleep
+    gnomeExtensions.appindicator # Tray icons
+    gnomeExtensions.blur-my-shell # Add blur effect
+    gnomeExtensions.removable-drive-menu # Mount/Unmount removable devices
+    gnomeExtensions.dash-to-dock # Convert the dash into a macOS style dock
+    gnomeExtensions.gamemode-shell-extension # gamemode indicator
+    gnomeExtensions.quick-settings-audio-panel # audio panel
+  ] ++ [
+    # Hyprland add-ons
+    hypridle # Idle daemon
+    hyprnome # GNOME-like workspace switching
+    hyprshot # Wrapper around grim + slurp for convenience
+    hyprpicker # Wayland color picker, required for hyprshot's --freeze
+    hyprland-protocols # Wayland protocol extensions
+    waybar # Statusbar
+    mpvpaper # Animated wallpapers from MP4
+    rofi-wayland # App launcher
+    playerctl # Control audio
+    # swaynotificationcenter # Notification daemon and center
   ];
 
   # Enable gnome-settings-daemon udev rules to make sure tray works well
   services.udev.packages = [pkgs.gnome.gnome-settings-daemon];
+
+  # Hyprland, testing new stuff is great _sometimes_
+  programs.hyprland.enable = true;
+  programs.hyprlock.enable = true;
 }
