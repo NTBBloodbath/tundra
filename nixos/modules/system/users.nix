@@ -8,7 +8,7 @@
     amartin = {
       isNormalUser = true;
       description = "Alejandro Martin";
-      extraGroups = ["networkmanager" "wheel" "adbusers"];
+      extraGroups = ["networkmanager" "wheel" "adbusers" "input"];
       openssh.authorizedKeys.keys = [
         # TODO: Add my SSH public key here
       ];

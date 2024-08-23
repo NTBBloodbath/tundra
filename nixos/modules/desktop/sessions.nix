@@ -50,7 +50,8 @@
     mpvpaper # Animated wallpapers from MP4
     rofi-wayland # App launcher
     playerctl # Control audio
-    # swaynotificationcenter # Notification daemon and center
+    swaynotificationcenter # Notification daemon and center
+    wlogout # Logout menu
   ];
 
   # Enable gnome-settings-daemon udev rules to make sure tray works well
