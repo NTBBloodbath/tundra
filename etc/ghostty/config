@@ -87,7 +87,7 @@ mouse-hide-while-typing = true
 # The opacity level (opposite of transparency) of the background. A value of
 # 1 is fully opaque and a value of 0 is fully transparent. A value less than 0
 # or greater than 1 will be clamped to the nearest valid value.
-background-opacity = 1
+background-opacity = 0.8
 
 # A positive value enables blurring of the background when background-opacity
 # is less than 1. The value is the blur radius to apply. A value of 20
@@ -235,7 +235,7 @@ window-inherit-working-directory = true
 window-inherit-font-size = true
 
 window-vsync = true
-window-decoration = true
+window-decoration = false
 window-theme = auto
 
 window-height = 30
