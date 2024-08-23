@@ -1,6 +1,7 @@
 [user]
 	name = NTBBloodbath
 	email = bloodbathalchemist@protonmail.com
+	signingkey = 18D6730BC846AAC5
 
 [init]
 	defaultbranch = master

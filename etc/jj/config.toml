@@ -1,0 +1,15 @@
+[user]
+name = "NTBBloodbath"
+email = "bloodbathalchemist@protonmail.com"
+
+[signing]
+sign-all = true
+backend = "gpg"
+key = "18D6730BC846AAC5"
+
+[ui]
+editor = "nvim"
+log-word-wrap = true
+
+[experimental-advance-branches]
+enabled-branches = ["main", "master"]
