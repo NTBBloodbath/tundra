@@ -1,6 +1,4 @@
 {
-  config,
-  lib,
   pkgs,
   ...
 }: {
@@ -15,4 +13,10 @@
 
   environment.sessionVariables.STEAM_EXTRA_COMPAT_TOOLS_PATHS = "\${HOME}/.steam/root/compatibilitytools.d";
   programs.gamemode.enable = true;
+
+  environment.systemPackages = with pkgs; [
+    heroic # Epic games launcher
+    bottles # Wine gaming my beloved
+    mangohud # Performance monitoring
+  ];
 }
