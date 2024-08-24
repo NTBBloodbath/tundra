@@ -126,7 +126,7 @@
     "custom/launcher": {
         "format": "  ",
         "tooltip": false,
-        "on-click": "rofi -show drun",
+        "on-click": "$HOME/.config/rofi/scripts/drun.sh",
         "on-click-right": "killall rofi"
     },
     "custom/power": {

@@ -1,0 +1,175 @@
+/**
+ *
+ * Theme by @adi1090x and slightly modified
+ *
+ **/
+
+/*----- Configuration -----*/
+configuration {
+  modi:                     "drun";
+  show-icons:               true;
+  display-drun:             "";
+  drun-display-format:      "{name}";
+}
+
+/*----- Global Properties -----*/
+* {
+  font: "CartographCF Nerd Font Mono 10";
+}
+
+/*----- Main Window -----*/
+window {
+  location:                    center;
+  anchor:                      center;
+  fullscreen:                  true;
+  width:                       1920px;
+  height:                      1080px;
+  x-offset:                    0px;
+  y-offset:                    0px;
+
+  enabled:                     true;
+  margin:                      0px;
+  padding:                     0px;
+  border:                      0px solid;
+  border-radius:               0px;
+  border-color:                #73a3f3;
+  background-color:            rgba(0, 0, 0, 0.7); /* blur the launcher using hyprland */
+  cursor:                      "default";
+}
+
+/*----- Main Box -----*/
+mainbox {
+  enabled:                     true;
+  spacing:                     100px;
+  margin:                      0px;
+  padding:                     100px 225px;
+  border:                      0px solid;
+  border-radius:               0px 0px 0px 0px;
+  border-color:                #73a3f3;
+  background-color:            transparent;
+  children:                    [ "inputbar", "listview" ];
+}
+
+/*----- Inputbar -----*/
+inputbar {
+  enabled:                     true;
+  spacing:                     10px;
+  margin:                      0% 28%;
+  padding:                     10px;
+  border:                      1px solid;
+  border-radius:               6px;
+  border-color:                white / 25%;
+  background-color:            white / 5%;
+  text-color:                  #d3d7de;
+  children:                    [ "prompt", "entry" ];
+}
+
+prompt {
+  enabled:                     true;
+  background-color:            transparent;
+  text-color:                  inherit;
+}
+textbox-prompt-colon {
+  enabled:                     true;
+  expand:                      false;
+  str:                         "::";
+  background-color:            transparent;
+  text-color:                  inherit;
+}
+entry {
+  enabled:                     true;
+  background-color:            transparent;
+  text-color:                  inherit;
+  cursor:                      text;
+  placeholder:                 "Search";
+  placeholder-color:           inherit;
+}
+
+/*----- Listview -----*/
+listview {
+  enabled:                     true;
+  columns:                     7;
+  lines:                       4;
+  cycle:                       true;
+  dynamic:                     true;
+  scrollbar:                   false;
+  layout:                      vertical;
+  reverse:                     false;
+  fixed-height:                true;
+  fixed-columns:               true;
+
+  spacing:                     0px;
+  margin:                      0px;
+  padding:                     0px;
+  border:                      0px solid;
+  border-radius:               0px;
+  border-color:                #73a3f3;
+  background-color:            transparent;
+  text-color:                  #d3d7de;
+  cursor:                      "default";
+}
+scrollbar {
+  handle-width:                5px ;
+  handle-color:                #73a3f3;
+  border-radius:               0px;
+  background-color:            #25252f;
+}
+
+/*----- Elements -----*/
+element {
+  enabled:                     true;
+  spacing:                     15px;
+  margin:                      0px;
+  padding:                     35px 10px;
+  border:                      0px solid;
+  border-radius:               15px;
+  border-color:                #73a3f3;
+  background-color:            transparent;
+  text-color:                  #d3d7de;
+  orientation:                 vertical;
+  cursor:                      pointer;
+}
+element normal.normal {
+  background-color:            transparent;
+  text-color:                  #d3d7de;
+}
+element selected.normal {
+  background-color:            rgba(115, 163, 243, 0.6);
+  text-color:                  #d3d7de;
+}
+element-icon {
+  background-color:            transparent;
+  text-color:                  inherit;
+  size:                        72px;
+  cursor:                      inherit;
+}
+element-text {
+  background-color:            transparent;
+  text-color:                  inherit;
+  highlight:                   inherit;
+  cursor:                      inherit;
+  vertical-align:              0.5;
+  horizontal-align:            0.5;
+}
+
+/*----- Message -----*/
+error-message {
+  padding:                     100px;
+  border:                      0px solid;
+  border-radius:               0px;
+  border-color:                #73a3f3;
+  background-color:            black / 10%;
+  text-color:                  #d3d7de;
+}
+
+textbox {
+  background-color:            transparent;
+  text-color:                  #d3d7de;
+  vertical-align:              0.5;
+  horizontal-align:            0.0;
+  highlight:                   none;
+}
+
+/*
+  vim: ft=rasi:sw=2:ts=2:sts=2:
+*/

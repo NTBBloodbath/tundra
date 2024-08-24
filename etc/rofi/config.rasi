@@ -1,0 +1,57 @@
+configuration {
+  /*----- General settings -----*/
+  modes: "window,drun";
+  font: "CartographCF Nerd Font Mono 14";
+  show-icons: true;
+  terminal: "ghostty";
+  /* icon-theme: ;*/
+  sort: true;
+  scroll-method: 0;
+  click-to-exit: true;
+
+  /*----- Matching settings -----*/
+  matching: "normal";
+  normalize-match: true;
+  tokenize: true;
+
+  /*----- Drun settings -----*/
+  drun-categories: "";
+  drun-match-fields: "name,generic,exec,categories,keywords";
+  drun-display-format: "{name}";
+  drun-show-actions: false;
+  drun-url-launcher: "xdg-open";
+  drun-use-desktop-cache: true;
+  drun-reload-desktop-cache: true;
+  drun {
+    /** Parse user desktop files. */
+    parse-user:   true;
+    /** Parse system desktop files. */
+    parse-system: true;
+  }
+
+  /*---------- Fallback Icon ----------*/
+  run,drun {
+    fallback-icon: "application-x-addon";
+  }
+
+  /*---------- History and Sorting ----------*/
+  disable-history: false;
+  sorting-method: "normal";
+  max-history-size: 25;
+
+  /*---------- File browser settings ----------*/
+  filebrowser {
+      directories-first: true;
+      sorting-method:    "name";
+  }
+
+  /*---------- Other settings ----------*/
+  timeout {
+      action: "kb-cancel";
+      delay:  0;
+  }
+}
+
+/*
+  vim: ft=rasi:sw=2:ts=2:sts=2:
+*/
