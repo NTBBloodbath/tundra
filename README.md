@@ -52,6 +52,13 @@ directory to `~/.local/share`. And that's it :)
 </details>
 
 <details>
+<summary>Apps launcher (rofi)</summary>
+
+![2024-08-23-202216_hyprshot](https://github.com/user-attachments/assets/cbc79f29-fe24-4d45-bca1-4437f22ebac8)
+
+</details>
+
+<details>
 <summary>Logout screen (wlogout)</summary>
 
 ![wlogout](https://github.com/user-attachments/assets/b1830c65-ac56-45e2-a5f8-514ec3c16eec)
