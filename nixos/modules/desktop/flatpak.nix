@@ -1,9 +1,4 @@
 {
-  config,
-  lib,
-  pkgs,
-  ...
-}: {
   # Enable flatpak
   services.flatpak.enable = true;
 
@@ -23,5 +18,6 @@
     "com.orama_interactive.Pixelorama" # Pixel art editor
     # "org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/23.08" # MangoHud for Bottles
     "io.github.Foldex.AdwSteamGtk" # Steam <3 Adwaita
+    "org.videolan.VLC" # Good old VLC
   ];
 }
