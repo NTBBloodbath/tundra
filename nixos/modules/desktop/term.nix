@@ -19,12 +19,16 @@
     nix-direnv.enable = true;
   };
 
+  # Enable FISH shell
+  programs.fish = {
+    enable = true;
+  };
+
   # Install system-wide packages (+ FISH shell plugins)
   environment.systemPackages =
     (with pkgs; [
       # Essentials
       git
-      fish
       # Archives
       zip
       unzip
