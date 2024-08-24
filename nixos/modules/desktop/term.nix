@@ -1,4 +1,5 @@
 {
+  lib,
   pkgs,
   ...
 }: {
@@ -22,6 +23,7 @@
   # Enable FISH shell
   programs.fish = {
     enable = true;
+    shellAliases = lib.mkForce {}; # Get rid of these annoying ls aliases
   };
 
   # Install system-wide packages (+ FISH shell plugins)
