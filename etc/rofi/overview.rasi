@@ -14,7 +14,7 @@ configuration {
 
 /*----- Global Properties -----*/
 * {
-  font: "CartographCF Nerd Font Mono 10";
+  font: "JetBrainsMono NF 10";
 }
 
 /*----- Main Window -----*/

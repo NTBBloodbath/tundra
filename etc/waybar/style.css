@@ -2,7 +2,7 @@
   border: none;
   border-radius: 0;
   min-height: 0;
-  font-family: Symbols Nerd Font, CartographCF Nerd Font Mono;
+  font-family: JetBrainsMono NF;
   font-size: 13px;
 }
 
@@ -27,7 +27,7 @@ window#waybar.hidden {
   /* Fix weird spacing in materia (waybar #450) */
   box-shadow: inset 0 -3px transparent;
   /* Use box-shadow instead of border so the text isn't offset */
-  padding: 6px 18px;
+  padding: 6px 12px;
   margin: 6px 3px;
   border-radius: 4px;
   background-color: #303040;
@@ -37,6 +37,8 @@ window#waybar.hidden {
 #workspaces button.active {
   color: #2a2a3a;
   background-color: #d087e8;
+  /* Fixes some icon positioning issues with JetBrainsMono */
+  padding-right: 15px;
 }
 
 #workspaces button:hover {
@@ -47,10 +49,13 @@ window#waybar.hidden {
 }
 
 #workspaces button.urgent {
-  background-color: #f38ba8;
+  background-color: #d75f4a;
+  /* Fixes some icon positioning issues with JetBrainsMono */
+  padding-right: 15px;
 }
 
 #memory,
+#gamemode,
 #temperature,
 #custom-gpu,
 #custom-power,
@@ -58,6 +63,7 @@ window#waybar.hidden {
 #battery,
 #backlight,
 #pulseaudio,
+#bluetooth,
 #network,
 #clock,
 #tray {
@@ -69,20 +75,22 @@ window#waybar.hidden {
 }
 
 #custom-power {
+  padding-right: 18px;
   margin-right: 6px;
 }
 
 #custom-notification {
-    color: #e7d482;
+  color: #e7d482;
+  /* Fixes some icon positioning issues with JetBrainsMono */
+  padding-right: 15px;
 }
 
 #custom-launcher {
-  padding-right: 7px;
-  padding-left: 7px;
+  padding-right: 18px;
+  padding-left: 10px;
   margin-left: 5px;
   margin-right: 5px;
   font-size: 20px;
-  /*border-radius: 8px 0px 0px 8px;*/
   color: #7c9fe6;
 }
 
@@ -97,10 +105,10 @@ window#waybar.hidden {
 }
 
 #gamemode {
-  border-radius: 4px;
-  margin: 6px 3px;
-  padding-right: 20px;
   background-color: #89c252;
+  /* Fixes some icon positioning issues with JetBrainsMono */
+  padding-left: 0px;
+  padding-right: 24px;
 }
 
 #memory {
@@ -121,10 +129,18 @@ window#waybar.hidden {
 
 #pulseaudio {
   background-color: #e7d482;
+  /* Fixes some icon positioning issues with JetBrainsMono */
+  padding-right: 14px;
+}
+
+#bluetooth {
+  background-color: #73a3f3;
 }
 
 #network {
   background-color: #92d3c5;
+  /* Fixes some icon positioning issues with JetBrainsMono */
+  padding-right: 14px;
 }
 
 #clock {

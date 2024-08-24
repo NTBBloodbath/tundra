@@ -1,0 +1,283 @@
+.control-center {
+  background: alpha(#25252f, 0.8);
+  border-radius: 24px;
+  border: 5px solid #25252f;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6);
+  margin: 18px;
+  padding: 12px;
+}
+
+/* Notifications  */
+.control-center .notification-row .notification-background,
+.control-center .notification-row .notification-background .notification.critical {
+  background-color: alpha(#303040, 0.6);
+  border-radius: 16px;
+  margin: 4px 4px;
+  padding: 4px;
+}
+
+.control-center .notification-row .notification-background .notification.critical {
+  color: #d75f4a;
+}
+
+.control-center .notification-row .notification-background {
+  border-radius: 16px;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.6);
+}
+
+.control-center .notification-row .notification-background .notification .notification-content {
+  margin: 6px;
+  padding: 0px 6px 2px 2px;
+}
+
+.control-center .notification-row .notification-background .notification .notification-content .text-box .time {
+  font-size: 12px;
+  color: #798399;
+  padding-bottom: 30px;
+}
+
+.control-center .notification-row .notification-background .notification .notification-content .text-box .summary {
+  padding-top: 16px;
+}
+
+.control-center .notification-row .notification-background .notification .notification-content .text-box .body {
+  color: #bdbdbd;
+}
+
+.control-center .notification-row .notification-background .notification .notification-content .text-box .summary,
+.control-center .notification-row .notification-background .notification .notification-content .text-box .body {
+  padding-left: 16px;
+}
+
+.control-center .notification-row .notification-background .notification > *:last-child > * {
+  min-height: 3.4em;
+}
+
+.control-center .notification-row .notification-background .notification > *:last-child > * .notification-action {
+  background: alpha(#73a3f3, .6);
+  color: #d3d7de;
+  border-radius: 12px;
+  margin: 6px;
+}
+
+.control-center .notification-row .notification-background .notification > *:last-child > * .notification-action:hover {
+  background: #73a3f3;
+}
+
+.control-center .notification-row .notification-background .notification > *:last-child > * .notification-action:active {
+  background-color: #73a3f3;
+}
+
+/* Buttons */
+
+.control-center .notification-row .notification-background .close-button {
+  background: transparent;
+  border-radius: 6px;
+  color: #d3d7de;
+  margin: 0px;
+  padding: 4px;
+}
+
+.control-center .notification-row .notification-background .close-button:hover {
+  background-color: #d75f4a;
+}
+
+.control-center .notification-row .notification-background .close-button:active {
+  background-color: #d75f4a;
+}
+
+/* Progress bars */
+progressbar,
+progress,
+trough {
+  border: 3px solid #25252f;
+  border-radius: 4px;
+  background: #25252f;
+  margin-left: 8px;
+}
+
+trough highlight {
+  border-radius: 4px;
+  background-color: #73a3f3;
+}
+
+trough slider {
+  padding: 10px;
+  background: #bdbdbd;
+  border-radius: 4px;
+}
+trough slider:hover {
+  background: #d3d7de;
+}
+
+/* Notifications expanded-group */
+
+.notification-group {
+  margin: 2px 8px 2px 8px;
+
+}
+.notification-group-headers {
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #d3d7de;
+  letter-spacing: 2px;
+}
+
+.notification-group-icon {
+  color: #d3d7de;
+}
+
+.notification-group-collapse-button,
+.notification-group-close-all-button {
+  background: transparent;
+  color: #d3d7de;
+  margin: 4px;
+  border-radius: 6px;
+  padding: 4px;
+}
+
+.notification-group-collapse-button:hover {
+  background: #73a3f3;
+}
+
+.notification-group-close-all-button:hover {
+  background: #d75f4a;
+}
+
+/* WIDGETS --------------------------------------------------------------------------- */
+
+/* Notification clear button */
+.widget-title {
+  font-size: 1.2em;
+  margin: 6px;
+  font-weight: 700;
+}
+
+.widget-title button {
+  background: #303040;
+  border-radius: 6px;
+  padding: 4px 16px;
+  border: 2px solid #25252f;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.widget-title button:hover {
+  background-color: #2a2a3a;
+}
+
+.widget-title button:active {
+  background-color: #73a3f3;
+}
+
+/* Do not disturb */
+.widget-dnd {
+  margin: 6px;
+  padding-top: 5px;
+  font-size: 1.2rem;
+  color: #798399;
+  font-weight: 700;
+}
+
+.widget-dnd > switch {
+  background: #303040;
+  font-size: initial;
+  border-radius: 8px;
+  box-shadow: none;
+  padding: 2px;
+  border: 2px solid #25252f;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.widget-dnd > switch:hover {
+  background: #2a2a3a;
+}
+
+.widget-dnd > switch:checked {
+  background: #73a3f3;
+}
+
+.widget-dnd > switch:checked:hover {
+  background: #2a2a3a;
+}
+
+.widget-dnd > switch slider {
+  background: #d3d7de;
+  border-radius: 6px;
+}
+
+/* Buttons menu */
+.widget-buttons-grid {
+  font-size: x-large;
+  padding: 6px 2px;
+  margin: 6px;
+  border-radius: 12px;
+  background: #303040;
+}
+
+.widget-buttons-grid>flowbox>flowboxchild>button {
+  margin: 4px 10px;
+  padding: 6px 12px;
+  background: transparent;
+  border-radius: 8px;
+}
+
+.widget-buttons-grid>flowbox>flowboxchild>button:hover {
+  background: #2a2a3a;
+}
+
+
+/* Music player */
+.widget-mpris {
+  border-radius: 0;
+  color: #d3d7de;
+  margin: 0px 6px;
+  padding: 0px 10px;
+}
+
+.widget-mpris-player {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 22px;
+  padding: 18px 14px;
+  margin: 6px;
+}
+
+.widget-mpris > box > button {
+  color: #d3d7de;
+  border-radius: 20px;
+}
+
+.widget-mpris button {
+  color: alpha(#d3d7de, .6);
+  padding-top: 15px;
+}
+
+.widget-mpris button:hover {
+  color: #d3d7de;
+}
+
+.widget-mpris-album-art {
+  border-radius: 16px;
+}
+
+.widget-mpris-title {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.widget-mpris-subtitle {
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+/* Volume */
+.widget-volume {
+  background: alpha(#303040, 0.6);
+  color: #d3d7de;
+  padding: 6px 16px 6px 10px;
+  margin-bottom: 32px;
+  margin-left: 6px;
+  margin-right: 6px;
+  border-radius: 6px;
+  border: 2px solid #25252f;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
