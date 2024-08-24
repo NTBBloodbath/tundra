@@ -1,6 +1,4 @@
 {
-  config,
-  lib,
   pkgs,
   ...
 }: {
@@ -13,6 +11,23 @@
   environment.systemPackages = with pkgs; [
     lact # AMDGPU Controller
     bottles # Wine gaming my beloved
+    mangohud # Performance monitoring
+    # Office
+    libreoffice
+    hunspell
+    hunspellDicts.es_VE
+    hunspellDicts.en-gb-ize
+    # GNOME
+    loupe # Image viewer
+    evince # Document viewer
+    baobab # Analyze disk usage
+    # snapshot # Camera
+    seahorse # Manage keyring
+    nautilus # File manager
+    gnome-calculator # Calculator
+    gnome-disk-utility # Udisks GUI
+    gnome-text-editor # Text editor
+    gnome.gnome-logs # SystemD journal logs
   ];
 
   # NOTE: see https://github.com/NixOS/nixpkgs/issues/317544

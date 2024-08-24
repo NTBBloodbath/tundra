@@ -1,5 +1,4 @@
 {
-  config,
   inputs,
   pkgs,
   ...
@@ -20,12 +19,10 @@
         jujutsu
         hyperfine
         wl-clipboard
-        gnome-tweaks
         # Social
         vesktop
         # Misc
-        godot_4
-        mangohud
+        # godot_4
       ];
     };
   };
