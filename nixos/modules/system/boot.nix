@@ -46,7 +46,7 @@
       "splash"
       "rd.systemd.show_status=auto"
       "sysrq_always_enabled=1"
-      "cpufreq.default_governor=performance"
+      # "cpufreq.default_governor=performance" # It seems like it is already the default in amd_pstate
       "amdgpu.ppfeaturemask=0xffffffff"
       "amd_pstate=active"
     ];
