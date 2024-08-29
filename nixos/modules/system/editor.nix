@@ -7,12 +7,9 @@
     with pkgs; [
       lua-language-server
       nil # nix-ls
-
       stylua
-
       lua51Packages.lua
       lua51Packages.luarocks
-      luajit # required for luarocks.nvim to work
     ]
   );
   neovimConfig = pkgs.neovimUtils.makeNeovimConfig {

@@ -31,6 +31,7 @@
     (with pkgs; [
       # Essentials
       git
+      helix
       # Archives
       zip
       unzip
@@ -46,9 +47,6 @@
       tealdeer
       lm_sensors
       smartmontools
-      # Lua (required by Neovim to use rocks.nvim)
-      lua51Packages.lua
-      lua51Packages.luarocks
       # Misc
       fastfetch
     ])
