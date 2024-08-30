@@ -43,6 +43,7 @@
       fzf
       btop
       wget
+      yazi
       ripgrep
       tealdeer
       lm_sensors
