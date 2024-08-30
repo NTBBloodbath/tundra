@@ -54,7 +54,9 @@
     ++ (with pkgs.fishPlugins; [
       fzf
       bass
+      done
       pure
+      sponge
       autopair
       colored-man-pages
     ]);
