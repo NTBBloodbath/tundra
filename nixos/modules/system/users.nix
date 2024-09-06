@@ -23,6 +23,7 @@
         vesktop
         # Misc
         # godot_4
+        easyeffects # Audio effects
       ];
     };
   };
