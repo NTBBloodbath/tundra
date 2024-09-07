@@ -20,5 +20,6 @@
     "io.github.Foldex.AdwSteamGtk" # Steam <3 Adwaita
     "org.videolan.VLC" # Good old VLC
     "org.telegram.desktop" # Telegram
+    "rest.insomnia.Insomnia" # Rest API client
   ];
 }
