@@ -2,11 +2,6 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’)
 {
-  config,
-  pkgs,
-  inputs,
-  ...
-}: {
   imports = [
     ./modules
     ./../hosts/workstation/hardware-configuration.nix
@@ -23,7 +18,7 @@
     gc = {
       automatic = true;
       dates = "weekly";
-      options = "--delete-older-than 1w";
+      options = "--delete-older-than 14d";
     };
 
     # Automatically run the nix store optimiser by using a systemd timer

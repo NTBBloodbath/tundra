@@ -21,5 +21,6 @@
     "org.videolan.VLC" # Good old VLC
     "org.telegram.desktop" # Telegram
     "rest.insomnia.Insomnia" # Rest API client
+    "org.inkscape.Inkscape" # Inkscape
   ];
 }
