@@ -15,6 +15,8 @@
     hunspell
     hunspellDicts.es_VE
     hunspellDicts.en-gb-ize
+    # VSCode with FHS support, I don't need to declaratively install my extensions.
+    vscode.fhs
   ];
 
   # NOTE: see https://github.com/NixOS/nixpkgs/issues/317544

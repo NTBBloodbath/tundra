@@ -65,8 +65,12 @@
   # Enable gnome-settings-daemon udev rules to make sure tray works well
   services.udev.packages = [pkgs.gnome.gnome-settings-daemon];
 
+  # Automatically login to hyprland session
   services.displayManager = {
     defaultSession = "hyprland";
     autoLogin.user = "amartin";
   };
+
+  # Make Electron applications use Wayland
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
 }
