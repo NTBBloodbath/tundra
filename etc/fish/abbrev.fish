@@ -4,7 +4,8 @@
 abbr -a dev cd $HOME/Develop
 abbr -a zdev cd $HOME/Develop/Zig
 abbr -a cdev cd $HOME/Develop/Clang
-# abbr -a csdev cd $HOME/Develop/Csharp
+#abbr -a csdev cd $HOME/Develop/CSharp
+abbr -a rbdev cd $HOME/Develop/Ruby
 abbr -a rsdev cd $HOME/Develop/Rust
 # abbr -a edev cd $HOME/Develop/Elixir
 # abbr -a jldev cd $HOME/Develop/Julia

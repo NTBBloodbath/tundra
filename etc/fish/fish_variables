@@ -136,3 +136,9 @@ SETUVAR pure_symbol_virtualenv_prefix:
 SETUVAR pure_threshold_command_duration:5
 SETUVAR pure_truncate_prompt_current_directory_keeps:\x2d1
 SETUVAR pure_truncate_window_title_current_directory_keeps:\x2d1
+SETUVAR sponge_allow_previously_successful:true
+SETUVAR sponge_delay:2
+SETUVAR sponge_filters:sponge_filter_failed\x1esponge_filter_matched
+SETUVAR sponge_purge_only_on_exit:false
+SETUVAR sponge_regex_patterns:\x1d
+SETUVAR sponge_successful_exit_codes:0

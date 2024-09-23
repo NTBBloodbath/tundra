@@ -12,4 +12,5 @@ editor = "nvim"
 log-word-wrap = true
 
 [experimental-advance-branches]
-enabled-branches = ["main", "master"]
+enabled-branches = ["glob:*"]
+# enabled-branches = ["main", "master"]

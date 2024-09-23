@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=hu.irl.cameractrls
+Exec=flatpak run --command=cameractrlsd.py hu.irl.cameractrls
+X-Flatpak=hu.irl.cameractrls

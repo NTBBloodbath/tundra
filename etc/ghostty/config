@@ -41,10 +41,13 @@ cursor-text = #d3d7de
 ##   Font
 #--------------------------------------
 font-size = 13.5
-font-family = CartographCF Nerd Font Mono
+# Favourite fonts (ghostty bundles NF):
+# CartographCF Nerd Font Mono
+# SF Mono
+font-family = SF Mono
 # font-family-bold = SFMono Nerd Font
-# font-family-italic = CartographCF Nerd Font Mono
-# font-family-bold-italic = CartographCF Nerd Font Mono
+font-family-italic = CartographCF Nerd Font Mono
+font-family-bold-italic = CartographCF Nerd Font Mono
 
 ###------------------------------------
 ##   Cursor
