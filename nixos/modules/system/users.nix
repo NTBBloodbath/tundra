@@ -24,6 +24,7 @@
         # Misc
         # godot_4
         easyeffects # Audio effects
+        devilutionx # Diablo on steroids
       ];
     };
   };
