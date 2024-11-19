@@ -16,6 +16,7 @@
         kitty # required to get the kitten utility to display images on Ghostty
         inputs.ghostty.packages."${pkgs.system}".default
         # Utilities
+        devenv
         jujutsu
         hyperfine
         wl-clipboard
