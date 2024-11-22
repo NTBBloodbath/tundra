@@ -20,6 +20,8 @@
         jujutsu
         hyperfine
         wl-clipboard
+        cloudflare-warp # Goodbye P2P torrent restrictions from my ISP!
+        qbittorrent
         # Social
         vesktop
         # Misc
