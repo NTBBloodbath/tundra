@@ -34,5 +34,10 @@
       # Set up Nix experimental features
       experimental-features = ["nix-command" "flakes"];
     };
+
+    # So that devenv can handle the caching for me
+    extraOptions = ''
+      trusted-users = root amartin
+    '';
   };
 }
