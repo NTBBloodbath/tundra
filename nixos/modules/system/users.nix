@@ -28,6 +28,7 @@
         # godot_4
         easyeffects # Audio effects
         devilutionx # Diablo on steroids
+        jetbrains.jdk # OpenJDK does not ship JavaFX for Minecraft
       ];
     };
   };
