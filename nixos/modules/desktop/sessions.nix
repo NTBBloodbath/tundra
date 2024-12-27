@@ -63,7 +63,7 @@
   ];
 
   # Enable gnome-settings-daemon udev rules to make sure tray works well
-  services.udev.packages = [pkgs.gnome.gnome-settings-daemon];
+  services.udev.packages = [pkgs.gnome-settings-daemon];
 
   # Automatically login to hyprland session
   services.displayManager = {
