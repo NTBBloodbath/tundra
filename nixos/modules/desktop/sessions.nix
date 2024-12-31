@@ -33,6 +33,8 @@
   programs.hyprlock.enable = true;
 
   environment.systemPackages = with pkgs; [
+    # --- GNOME additional packages
+    gnome-tweaks
     # --- GNOME Extensions
     gnomeExtensions.freon # Monitor temps, voltage and fan RPM
     gnomeExtensions.forge # Tiling window manager
