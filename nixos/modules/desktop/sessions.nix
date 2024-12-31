@@ -56,6 +56,7 @@
     mpvpaper # Animated wallpapers from MP4
     rofi-wayland # App launcher
     playerctl # Control audio
+    swaybg # Wallpaper
     swaynotificationcenter # Notification daemon and center
     wlogout # Logout menu
     # swayosd # GNOME-like OSD
