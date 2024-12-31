@@ -26,6 +26,7 @@
         vesktop
         # Misc
         # godot_4
+        showmethekey # Wayland keylogger
         easyeffects # Audio effects
         devilutionx # Diablo on steroids
         jetbrains.jdk # OpenJDK does not ship JavaFX for Minecraft
