@@ -7,7 +7,7 @@ abbr -a cdev cd $HOME/Develop/Clang
 #abbr -a csdev cd $HOME/Develop/CSharp
 abbr -a rbdev cd $HOME/Develop/Ruby
 abbr -a rsdev cd $HOME/Develop/Rust
-# abbr -a edev cd $HOME/Develop/Elixir
+abbr -a edev cd $HOME/Develop/Elixir
 # abbr -a jldev cd $HOME/Develop/Julia
 abbr -a pydev cd $HOME/Develop/Python
 abbr -a nodev cd $HOME/Develop/Node

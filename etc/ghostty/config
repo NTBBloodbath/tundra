@@ -42,12 +42,14 @@ cursor-text = #d3d7de
 #--------------------------------------
 font-size = 13.5
 # Favourite fonts (ghostty bundles NF):
-# CartographCF Nerd Font Mono
-# SF Mono
-font-family = SF Mono
+# CartographCF Nerd Font Mono 13.5
+# SF Mono 13.5
+# Departure Mono 16.5
+font-family = Fira Code Retina
+font-family-bold = Fira Code Bold
 # font-family-bold = SFMono Nerd Font
-font-family-italic = CartographCF Nerd Font Mono
-font-family-bold-italic = CartographCF Nerd Font Mono
+# font-family-italic = CartographCF Nerd Font Mono
+# font-family-bold-italic = CartographCF Nerd Font Mono
 
 ###------------------------------------
 ##   Cursor
