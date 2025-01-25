@@ -9,6 +9,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    # Utilities
     lact # AMDGPU Controller
     # Office
     libreoffice

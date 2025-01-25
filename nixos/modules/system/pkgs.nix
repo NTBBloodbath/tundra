@@ -1,6 +1,5 @@
 {
-  config,
-  pkgs,
+  oskars-dotfiles,
   ...
 }: {
   # Install Neovim and set it as the default $EDITOR
