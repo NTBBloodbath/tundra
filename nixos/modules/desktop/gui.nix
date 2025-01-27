@@ -11,6 +11,7 @@
   environment.systemPackages = with pkgs; [
     # Utilities
     lact # AMDGPU Controller
+    gapless # GTK4 music player
     # Office
     libreoffice
     hunspell

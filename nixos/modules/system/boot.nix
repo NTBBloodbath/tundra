@@ -60,9 +60,9 @@
       options = ["nofail" "x-systemd.device-timeout=5" "rw" "user" "exec" "relatime" "data=writeback" "nobh"];
     };
     "/mnt/Storage" = {
-      device = "/dev/disk/by-label/Storage";
+      device = "/dev/disk/by-label/STORAGE";
       fsType = "vfat";
-      options = ["nofail" "x-systemd.device-timeout=5" "rw" "user" "exec" "relatime" "data=writeback" "nobh"];
+      options = ["nofail" "x-systemd.device-timeout=5" "rw" "user" "uid=1000" "gid=100" "exec" "relatime"];
     };
   };
 
