@@ -64,7 +64,7 @@
 
   # Automatically login to GNOME session
   services.displayManager = {
-    defaultSession = "gnome";
+    defaultSession = "niri";
     autoLogin.user = "amartin";
   };
 
