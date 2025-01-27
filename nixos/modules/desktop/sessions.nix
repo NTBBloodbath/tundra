@@ -34,7 +34,7 @@
 
   environment.systemPackages = with pkgs; [
     # --- GNOME additional packages
-    # refine # Modern gnome-tweaks replacement
+    refine # Modern gnome-tweaks replacement
     # --- GNOME Extensions
     gnomeExtensions.freon # Monitor temps, voltage and fan RPM
     gnomeExtensions.forge # Tiling window manager
