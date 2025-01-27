@@ -5,7 +5,8 @@
     "height": 44,
     "modules-left": [
         "custom/launcher",
-        "hyprland/workspaces"
+        "niri/workspaces",
+        "niri/window"
     ],
     "modules-center": [
         "clock"
@@ -22,25 +23,16 @@
         "pulseaudio",
         "custom/power"
     ],
-    "hyprland/workspaces": {
-        "active-only": false,
-        "on-click": "activate",
-        "format": "{icon}",
-        "format-icons": {
-            "default": "",
-            "empty": "",
-            "active": "",
-            "urgent": ""
-        },
-        "persistent-workspaces": {
-            "1": [],
-            "2": [],
-            "3": [],
-            "4": []
-        }
+    "niri/workspaces": {
+        "current-only": true,
+        "format": "{value}"
     },
-    "hyprland/window": {
-        "format": "{initialTitle}"
+    "niri/window": {
+        "format": "{app_id}",
+        "rewrite": {
+            "firefox(.*)": "Firefox",
+            "(.*)ghostty": "Ghostty"
+        }
     },
     "memory": {
         "interval": 5,
@@ -118,14 +110,14 @@
         "tooltip": false,
         "format": "{icon}",
         "format-icons": {
-            "notification": "",
-            "none": "",
-            "dnd-notification": "",
-            "dnd-none": "",
-            "inhibited-notification": "",
-            "inhibited-none": "",
-            "dnd-inhibited-notification": "",
-            "dnd-inhibited-none": ""
+            "notification": "󱅫",
+            "none": "󰂜",
+            "dnd-notification": "󱏩",
+            "dnd-none": "󱏪",
+            "inhibited-notification": "󰵙",
+            "inhibited-none": "󰺁",
+            "dnd-inhibited-notification": "󰂛",
+            "dnd-inhibited-none": "󰪑"
         },
         "return-type": "json",
         "exec-if": "which swaync-client",

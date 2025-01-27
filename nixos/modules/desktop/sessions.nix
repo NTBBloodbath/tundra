@@ -28,13 +28,13 @@
     geary # email reader
   ];
 
-  # Hyprland, testing new stuff is great _sometimes_
-  programs.hyprland.enable = true;
+  # Niri, scrollable-tiling Wayland compositor
+  programs.niri.enable = true;
   programs.hyprlock.enable = true;
 
   environment.systemPackages = with pkgs; [
     # --- GNOME additional packages
-    refine # Modern gnome-tweaks replacement
+    # refine # Modern gnome-tweaks replacement
     # --- GNOME Extensions
     gnomeExtensions.freon # Monitor temps, voltage and fan RPM
     gnomeExtensions.forge # Tiling window manager
@@ -46,12 +46,9 @@
     gnomeExtensions.gamemode-shell-extension # gamemode indicator
     gnomeExtensions.quick-settings-audio-panel # audio panel
   ] ++ [
-    # --- Hyprland add-ons
+    # --- Niri
+    xwayland-satellite # Xwayland
     hypridle # Idle daemon
-    hyprnome # GNOME-like workspace switching
-    hyprshot # Wrapper around grim + slurp for convenience
-    hyprpicker # Wayland color picker, required for hyprshot's --freeze
-    hyprland-protocols # Wayland protocol extensions
     waybar # Statusbar
     mpvpaper # Animated wallpapers from MP4
     rofi-wayland # App launcher
@@ -60,17 +57,14 @@
     swaynotificationcenter # Notification daemon and center
     wlogout # Logout menu
     # swayosd # GNOME-like OSD
-    # --- Hyprland plugins
-    # See https://github.com/KZDKM/Hyprspace/issues/79
-    # hyprlandPlugins.hyprspace
   ];
 
   # Enable gnome-settings-daemon udev rules to make sure tray works well
   services.udev.packages = [pkgs.gnome-settings-daemon];
 
-  # Automatically login to hyprland session
+  # Automatically login to GNOME session
   services.displayManager = {
-    defaultSession = "hyprland";
+    defaultSession = "gnome";
     autoLogin.user = "amartin";
   };
 

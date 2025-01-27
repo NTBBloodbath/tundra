@@ -1,13 +1,13 @@
 * {
   border: none;
-  border-radius: 0;
-  min-height: 0;
+  border-radius: 0px;
+  min-height: 0px;
   font-family: JetBrainsMono NF;
   font-size: 13px;
 }
 
 window#waybar {
-  background-color: rgba(37, 37, 47, 0.9); /* blur the bar using hyprland */
+  background-color: rgba(37, 37, 47, 0.8); /* blur the bar using hyprland */
   transition-property: background-color;
   transition-duration: 0.5s;
 }
@@ -38,7 +38,7 @@ window#waybar.hidden {
   color: #2a2a3a;
   background-color: #d087e8;
   /* Fixes some icon positioning issues with JetBrainsMono */
-  padding-right: 15px;
+  /*padding-right: 15px;*/
 }
 
 #workspaces button:hover {
@@ -51,7 +51,19 @@ window#waybar.hidden {
 #workspaces button.urgent {
   background-color: #d75f4a;
   /* Fixes some icon positioning issues with JetBrainsMono */
-  padding-right: 15px;
+  /*padding-right: 15px;*/
+}
+
+#window {
+  padding: 6px 12px;
+  margin: 6px 3px;
+  border-radius: 4px;
+  background-color: #303040;
+  color: #d3d7de;
+}
+
+window#waybar.empty #window {
+  background-color: transparent;
 }
 
 #memory,
