@@ -53,10 +53,17 @@
   };
 
   # Mount my external FireCuda drive
-  fileSystems."/mnt/Juegos" = {
-    device = "/dev/disk/by-label/Juegos";
-    fsType = "ext4";
-    options = ["nofail" "x-systemd.device-timeout=5" "rw" "user" "exec" "relatime" "data=writeback" "nobh"];
+  fileSystems = {
+    "/mnt/Juegos" = {
+      device = "/dev/disk/by-label/Juegos";
+      fsType = "ext4";
+      options = ["nofail" "x-systemd.device-timeout=5" "rw" "user" "exec" "relatime" "data=writeback" "nobh"];
+    };
+    "/mnt/Storage" = {
+      device = "/dev/disk/by-label/Storage";
+      fsType = "vfat";
+      options = ["nofail" "x-systemd.device-timeout=5" "rw" "user" "exec" "relatime" "data=writeback" "nobh"];
+    };
   };
 
   # Configure console (TTY) keymap
