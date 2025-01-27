@@ -18,5 +18,6 @@
     heroic # Epic games launcher
     bottles # Wine gaming my beloved
     mangohud # Performance monitoring
+    mindustry-wayland # Mindustry
   ];
 }
