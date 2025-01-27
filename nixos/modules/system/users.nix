@@ -19,6 +19,7 @@
         jujutsu
         hyperfine
         wl-clipboard
+        nicotine-plus # SoulSeek ftw
         cloudflare-warp # Goodbye P2P torrent restrictions from my ISP!
         qbittorrent
         # Social
