@@ -26,10 +26,10 @@
       };
     };
     plymouth.enable = true;
-    extraModulePackages = with pkgs.linuxPackages_latest; [ryzen-smu zenpower];
+    extraModulePackages = with pkgs.linuxPackages_xanmod_stable; [ryzen-smu zenpower];
     initrd.kernelModules = ["amdgpu" "zenpower" "ryzen-smu"];
     blacklistedKernelModules = ["k10temp"]; # Required by zenpower
-    kernelPackages = pkgs.linuxPackages_latest;
+    kernelPackages = pkgs.linuxPackages_xanmod_stable;
     # KERNEL PARAMETER                       | Parameter description
     # ---------------------------------------+---------------------------------------------------------------------------------------
     # rw                                     | Mounts root read/write
