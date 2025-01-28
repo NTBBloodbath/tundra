@@ -1,6 +1,7 @@
 {
   lib,
   pkgs,
+  inputs,
   ...
 }: let
   binpath = lib.makeBinPath (
@@ -26,7 +27,8 @@
   fullConfig = (
     neovimConfig
     // {
-      wrapperArgs = lib.escapeShellArgs neovimConfig.wrapperArgs + " --prefix PATH : ${binpath}";
+      wrapperArgs = lib.escapeShellArgs neovimConfig.wrapperArgs
+        + " --prefix PATH : ${binpath}";
     }
   );
 in {
@@ -37,10 +39,16 @@ in {
           buildInputs = oldAttrs.buildInputs ++ [super.tree-sitter];
         }))
         fullConfig;
+      neovim-nightly =
+        pkgs.wrapNeovimUnstable (inputs.neovim-nightly-overlay.packages.${pkgs.system}.default.overrideAttrs (oldAttrs: {
+          buildInputs = oldAttrs.buildInputs ++ [super.tree-sitter];
+        }))
+        fullConfig;
     })
   ];
 
   environment.systemPackages = with pkgs; [
-    neovim-stable
+    # neovim-stable
+    neovim-nightly
   ];
 }
