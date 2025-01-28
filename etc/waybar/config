@@ -6,7 +6,8 @@
     "modules-left": [
         "custom/launcher",
         "niri/workspaces",
-        "niri/window"
+        "niri/window",
+        "mpris"
     ],
     "modules-center": [
         "clock"
@@ -31,7 +32,22 @@
         "format": "{app_id}",
         "rewrite": {
             "firefox(.*)": "Firefox",
-            "(.*)ghostty": "Ghostty"
+            "(.*)ghostty": "Ghostty",
+            "(.*)Nicotine": "Nicotine",
+            "(.*)g4music": "Gapless",
+            "(.*)EarTag": "Ear Tag"
+        }
+    },
+    "mpris": {
+        "ignored-players": [],
+        "format": "{status_icon}  {dynamic}",
+        "dynamic-order": ["title", "artist", "album"],
+        "dynamic-importance-order": ["title", "album", "artist"],
+        "dynamic-len": 48,
+        "status-icons": {
+            "paused": "",
+            "playing": "",
+            "stopped": ""
         }
     },
     "memory": {

@@ -36,6 +36,7 @@ window#waybar.hidden {
 
 #workspaces button.active {
   color: #2a2a3a;
+  font-weight: bold;
   background-color: #d087e8;
   /* Fixes some icon positioning issues with JetBrainsMono */
   /*padding-right: 15px;*/
@@ -48,12 +49,6 @@ window#waybar.hidden {
   background-color: #d3d7de;
 }
 
-#workspaces button.urgent {
-  background-color: #d75f4a;
-  /* Fixes some icon positioning issues with JetBrainsMono */
-  /*padding-right: 15px;*/
-}
-
 #window {
   padding: 6px 12px;
   margin: 6px 3px;
@@ -63,9 +58,12 @@ window#waybar.hidden {
 }
 
 window#waybar.empty #window {
+  padding: 0px;
+  margin: 0px;
   background-color: transparent;
 }
 
+#mpris,
 #memory,
 #gamemode,
 #temperature,
@@ -125,6 +123,21 @@ window#waybar.empty #window {
 
 #memory {
   background-color: #e7a06a;
+}
+
+#mpris {
+  color: #d3d7de;
+  background-color: #2a2a3a;
+}
+#mpris.playing {
+  /*color: #89c252;*/
+}
+#mpris.paused {
+  /* 707b87 */
+  color: #798399;
+}
+#mpris.stopped {
+  color: #d75f4a;
 }
 
 #temperature {

@@ -80,6 +80,8 @@ output "HDMI-A-1" {
     // position x=1280 y=0
 
     variable-refresh-rate on-demand=true
+
+    background-color "#2a2a3a"
 }
 
 // Settings that influence how windows are positioned and sized.
@@ -251,6 +253,7 @@ window-rule {
 
 window-rule {
     match at-startup=true app-id=r#"^steam$"#
+    match at-startup=true app-id=r#"^Mindustry$"#
     open-on-workspace "gaming"
 }
 
@@ -489,7 +492,7 @@ cursor {
     xcursor-size 24
 
     hide-when-typing
-    hide-after-inactive-ms 1000
+    hide-after-inactive-ms 30000
 }
 
 hotkey-overlay {
