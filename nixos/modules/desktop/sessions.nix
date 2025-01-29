@@ -56,7 +56,7 @@
     swaybg # Wallpaper
     swaynotificationcenter # Notification daemon and center
     wlogout # Logout menu
-    # swayosd # GNOME-like OSD
+    swayosd # GNOME-like OSD
   ];
 
   # Enable gnome-settings-daemon udev rules to make sure tray works well
