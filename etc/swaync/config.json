@@ -55,7 +55,7 @@
     },
     "volume": {
       "label": " ",
-      "show-per-app": false,
+      "show-per-app": true,
       "show-per-app-label": true,
       "expand-button-label": "",
       "collapse-button-label": ""

@@ -155,7 +155,7 @@ window#waybar.empty #window {
 #pulseaudio {
   background-color: #e7d482;
   /* Fixes some icon positioning issues with JetBrainsMono */
-  padding-right: 14px;
+  padding-right: 17px;
 }
 
 #bluetooth {

@@ -108,9 +108,9 @@
         "format-bluetooth": "󰥰",
         "nospacing": 1,
         "tooltip-format": "{desc}\nVolume: {volume}%",
-        "format-muted": "",
+        "format-muted": "",
         "format-icons": {
-            "headphone": "󰋋",
+            "headphone": "",
             "default": ["","",""]
         },
         /* TODO: add on-click for pavucontrol or something like that */
@@ -144,6 +144,7 @@
     },
     "custom/gpu": {
         "exec": "sensors | grep 'edge' | awk -F: '{ print $2 }' | tr -d ' ' | sed -e 's/(.*)//' -e 's/+//' -e 's/\\.[[:digit:]]//'",
+        "on-click": "lact",
         "format": "󰾲  {}",
         "tooltip": false,
         "interval": 10
