@@ -15,6 +15,7 @@
         kitty # required to get the kitten utility to display images on Ghostty
         ghostty
         # Utilities
+        cachix
         devenv
         jujutsu
         hyperfine
