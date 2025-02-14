@@ -19,5 +19,6 @@
     bottles # Wine gaming my beloved
     mangohud # Performance monitoring
     mindustry-wayland # Mindustry
+    osu-lazer-bin # Osu! my beloved
   ];
 }
