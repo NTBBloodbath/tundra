@@ -14,15 +14,18 @@
         # Terminal emulators
         kitty # required to get the kitten utility to display images on Ghostty
         ghostty
-        # Utilities
+        # Development tools
         cachix
         devenv
         jujutsu
+        penpot-desktop
+        # Utilities
         hyperfine
         wl-clipboard
         nicotine-plus # SoulSeek ftw
         cloudflare-warp # Goodbye P2P torrent restrictions from my ISP!
         qbittorrent
+        pavucontrol
         # Social
         vesktop # Discord
         element-desktop # Matrix
