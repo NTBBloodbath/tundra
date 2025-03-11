@@ -1,5 +1,6 @@
 {
   pkgs,
+  inputs,
   ...
 }: {
   # Install Firefox Developer Edition
@@ -9,6 +10,8 @@
   };
 
   environment.systemPackages = with pkgs; [
+    # Zen browser
+    inputs.zen-browser.packages."${system}".default
     # Utilities
     lact # AMDGPU Controller
     gapless # GTK4 music player

@@ -14,7 +14,11 @@
     # Playit.gg agent
     playit-nixos-module.url = "github:pedorich-n/playit-nixos-module";
 
+    # Neovim nightly
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
+
+    # Zen browser
+    zen-browser.url = "github:0xc000022070/zen-browser-flake";
 
     # SpotX-Bash overlay
     oskars-dotfiles = {
@@ -27,6 +31,7 @@
     nixpkgs,
     neovim-nightly-overlay,
     playit-nixos-module,
+    zen-browser,
     oskars-dotfiles,
     ...
   } @ inputs: {
