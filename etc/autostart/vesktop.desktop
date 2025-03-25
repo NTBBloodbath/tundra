@@ -2,6 +2,6 @@
 Type=Application
 Name=Vesktop
 Comment=Vesktop autostart script
-Exec="/nix/store/0dzx8n4vzw8xwxlx9s7g96qidjsiikwc-electron-unwrapped-33.0.2/libexec/electron/electron" "/nix/store/bhac9sn1w2rn91r8nzm15cv709c96z1v-vesktop-1.5.3/opt/Vesktop/resources/app.asar" "--enable-speech-dispatcher" "--ozone-platform-hint=auto" "--enable-features=WaylandWindowDecorations" "--enable-wayland-ime"
+Exec="/nix/store/skdkvwf3cpfsc19dr8gl820zman15n1c-electron-34.2.0/libexec/electron/.electron-wrapped" "/nix/store/n5ywy4pv7r335x39wn5rw2kfs0450gip-vesktop-1.5.5/opt/Vesktop/resources/app.asar" "--enable-speech-dispatcher" "--ozone-platform-hint=auto" "--enable-features=WaylandWindowDecorations" "--enable-wayland-ime=true"
 StartupNotify=false
 Terminal=false

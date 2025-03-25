@@ -40,16 +40,18 @@ cursor-text = #d3d7de
 ###------------------------------------
 ##   Font
 #--------------------------------------
-font-size = 13.5
+font-size = 12.5
 # Favourite fonts (ghostty bundles NF):
 # CartographCF Nerd Font Mono 13.5
 # SF Mono 13.5
+# Martian Mono 12.5 - cell height 14%
+# Fira Code Retina 13.5
 # Departure Mono 16.5
-font-family = Fira Code Retina
-font-family-bold = Fira Code Bold
+font-family = Martian Mono
 # font-family-bold = SFMono Nerd Font
 # font-family-italic = CartographCF Nerd Font Mono
 # font-family-bold-italic = CartographCF Nerd Font Mono
+adjust-cell-height = 14%
 
 ###------------------------------------
 ##   Cursor
@@ -81,7 +83,7 @@ window-inherit-font-size = true
 window-inherit-working-directory = true
 
 window-theme = auto
-window-vsync = true
+window-vsync = false
 window-decoration = false
 
 ###------------------------------------

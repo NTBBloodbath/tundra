@@ -12,6 +12,10 @@ source $HOME/.config/fish/aliases.fish
 test -e $XDG_CONFIG_HOME/fish/tk.fish && source $XDG_CONFIG_HOME/fish/tk.fish
 # }}}
 
+# Add prompt components to path
+set fish_function_path $fish_function_path $HOME/.config/fish/functions/prompt
+
+# Direnv integration
 if command -qs direnv
    direnv hook fish | source
 end

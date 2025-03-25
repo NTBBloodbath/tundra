@@ -28,7 +28,7 @@ input {
         // off
         // natural-scroll
         // accel-speed 0.2
-        // accel-profile "flat"
+        accel-profile "flat"
         // scroll-method "no-scroll"
     }
 
@@ -133,6 +133,24 @@ layout {
 
     focus-ring {
         off
+    }
+
+    // shadow {
+    //     on
+    // }
+
+    // Controls the appearance of the tab indicator that appears next to columns in
+    // tabbed display mode.
+    tab-indicator {
+        // width 4
+        // length total-proportion=0.5
+        gap 8 // Half of the general layout gap
+        gaps-between-tabs 8
+        corner-radius 8
+        position "top"
+        place-within-column
+        active-gradient from="#d087e8" to="#73a3f3" angle=45 //relative-to="workspace-view"
+        inactive-gradient from="#303040" to="#798399" angle=45 //relative-to="workspace-view"
     }
 
     // You can also add a border. It's similar to the focus ring, but always visible.
@@ -281,10 +299,6 @@ binds {
 
     // Volume keys mappings for PipeWire & WirePlumber.
     // The allow-when-locked=true property makes them work even when the session is locked.
-    // XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "5%+"; }
-    // XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "5%-"; }
-    // XF86AudioMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
-    // XF86AudioMicMute     allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
     XF86AudioRaiseVolume allow-when-locked=true { spawn "swayosd-client" "--output-volume" "raise"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn "swayosd-client" "--output-volume" "lower"; }
     XF86AudioMute        allow-when-locked=true { spawn "swayosd-client" "--output-volume" "mute-toggle"; }
@@ -295,6 +309,7 @@ binds {
     XF86AudioNext        allow-when-locked=true { spawn "playerctl" "next"; }
 
     Mod+Q { close-window; }
+    Mod+W { toggle-column-tabbed-display; }
 
     Mod+Left  { focus-column-left; }
     Mod+Down  { focus-window-down; }
@@ -481,8 +496,8 @@ binds {
     // Mod+Shift+Space { switch-layout "prev"; }
 
     Print { screenshot; }
-    Ctrl+Print { screenshot-screen; }
-    Alt+Print { screenshot-window; }
+    Ctrl+Print { screenshot-screen write-to-disk=false; }
+    Alt+Print { screenshot-window write-to-disk=false; }
 
     // The quit action will show a confirmation dialog to avoid accidental exits.
     Mod+Shift+Q { quit; }

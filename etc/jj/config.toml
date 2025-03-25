@@ -3,14 +3,22 @@ name = "NTBBloodbath"
 email = "bloodbathalchemist@protonmail.com"
 
 [signing]
-sign-all = true
+sign-behavior = "own"
 backend = "gpg"
 key = "18D6730BC846AAC5"
 
 [ui]
 editor = "nvim"
 log-word-wrap = true
+default-command = "log"
 
-[experimental-advance-branches]
-enabled-branches = ["glob:*"]
+[aliases]
+sync-master = ["util", "exec", "--", "bash", "-c", """
+#!/usr/bin/env bash
+set -euo pipefail
+jj git fetch && jj new master
+""", ""]
+
+# [experimental-advance-branches]
+# enabled-branches = ["glob:*"]
 # enabled-branches = ["main", "master"]

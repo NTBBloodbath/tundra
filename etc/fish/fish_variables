@@ -27,7 +27,7 @@ SETUVAR --export XDG_CONFIG_HOME:/home/amartin/\x2econfig
 SETUVAR --export XDG_DATA_HOME:/home/amartin/\x2elocal/share
 SETUVAR --export XDG_RUNTIME_DIR:/mnt/wslg/runtime\x2ddir
 SETUVAR --export XDG_STATE_HOME:/home/amartin/\x2elocal/state
-SETUVAR __fish_initialized:3400
+SETUVAR __fish_initialized:3800
 SETUVAR fish_color_autosuggestion:brblack
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:blue
@@ -49,7 +49,7 @@ SETUVAR fish_color_option:cyan
 SETUVAR fish_color_param:cyan
 SETUVAR fish_color_quote:yellow
 SETUVAR fish_color_redirection:cyan\x1e\x2d\x2dbold
-SETUVAR fish_color_search_match:bryellow\x1e\x2d\x2dbackground\x3dbrblack
+SETUVAR fish_color_search_match:white\x1e\x2d\x2dbackground\x3dbrblack
 SETUVAR fish_color_selection:white\x1e\x2d\x2dbold\x1e\x2d\x2dbackground\x3dbrblack
 SETUVAR fish_color_status:red
 SETUVAR fish_color_user:brgreen
