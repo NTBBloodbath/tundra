@@ -55,9 +55,9 @@
       fzf
       bass
       done
-      pure
       sponge
       autopair
+      async-prompt
       colored-man-pages
     ]);
 
