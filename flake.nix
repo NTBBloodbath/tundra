@@ -20,6 +20,9 @@
     # Zen browser
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
 
+    # Norgolith
+    norgolith.url = "github:NTBBloodbath/norgolith";
+
     # SpotX-Bash overlay
     oskars-dotfiles = {
       url = "github:oskardotglobal/.dotfiles/nix";
@@ -32,6 +35,7 @@
     neovim-nightly-overlay,
     playit-nixos-module,
     zen-browser,
+    norgolith,
     oskars-dotfiles,
     ...
   } @ inputs: {
