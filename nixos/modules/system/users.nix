@@ -1,5 +1,6 @@
 {
   pkgs,
+  inputs,
   ...
 }: {
   users.users = {
@@ -20,27 +21,30 @@
         jujutsu
         penpot-desktop
         # Utilities
+        inputs.norgolith.packages.x86_64-linux.default
         hyperfine
         wl-clipboard
         nicotine-plus # SoulSeek ftw
         cloudflare-warp # Goodbye P2P torrent restrictions from my ISP!
         qbittorrent
         pavucontrol
+        # Sneak Peak
+        inkscape
+        obs-studio
+        cameractrls
+        kdePackages.kdenlive
         # Social
         vesktop # Discord
         element-desktop # Matrix
         telegram-desktop # Telegram
         # Misc
         vlc # Good old VLC
+        rmpc # Terminal music player
         spotify # (patched with SpotX through an overlay)
         # godot_4 # Godot engine
         insomnia # Rest API client
-        inkscape
-        obs-studio
-        cameractrls
-        showmethekey # Wayland keylogger
         easyeffects # Audio effects
-        devilutionx # Diablo on steroids
+        # devilutionx # Diablo on steroids BUG: does not build atm
         jetbrains.jdk # OpenJDK does not ship JavaFX for Minecraft
         mcrcon # RCON server for Minecraft servers
       ];
