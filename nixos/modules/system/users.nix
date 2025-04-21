@@ -39,7 +39,6 @@
         telegram-desktop # Telegram
         # Misc
         vlc # Good old VLC
-        rmpc # Terminal music player
         spotify # (patched with SpotX through an overlay)
         # godot_4 # Godot engine
         insomnia # Rest API client
