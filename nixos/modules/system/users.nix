@@ -29,6 +29,7 @@
         qbittorrent
         pavucontrol
         # Sneak Peak
+        svp
         inkscape
         obs-studio
         cameractrls

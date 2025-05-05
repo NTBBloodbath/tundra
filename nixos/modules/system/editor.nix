@@ -48,7 +48,7 @@ in {
   ];
 
   environment.systemPackages = with pkgs; [
-    # neovim-stable
-    neovim-nightly
+    neovim-stable
+    # neovim-nightly
   ];
 }
