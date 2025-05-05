@@ -29,6 +29,7 @@
       automatic = true;
       dates = "weekly";
       options = "--delete-older-than 14d";
+      randomizedDelaySec = "10m";
     };
 
     # Automatically run the nix store optimiser by using a systemd timer

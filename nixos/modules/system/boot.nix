@@ -25,7 +25,7 @@
         configurationLimit = 3;
       };
     };
-    plymouth.enable = true;
+    plymouth.enable = false; # It just makes my boot time so fucking slow it makes me want to cry
     extraModulePackages = with pkgs.linuxPackages_xanmod_stable; [ryzen-smu zenpower];
     initrd.kernelModules = ["amdgpu" "zenpower" "ryzen-smu"];
     blacklistedKernelModules = ["k10temp"]; # Required by zenpower
