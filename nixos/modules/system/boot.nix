@@ -25,9 +25,10 @@
         configurationLimit = 3;
       };
     };
+    initrd.systemd.enable = true; # Do the heavy lifting for the kernel
     plymouth.enable = false; # It just makes my boot time so fucking slow it makes me want to cry
-    extraModulePackages = with pkgs.linuxPackages_xanmod_stable; [ryzen-smu zenpower];
-    initrd.kernelModules = ["amdgpu" "zenpower" "ryzen-smu"];
+    extraModulePackages = with pkgs.linuxPackages_xanmod_stable; [zenpower];
+    kernelModules = ["zenpower"];
     blacklistedKernelModules = ["k10temp"]; # Required by zenpower
     kernelPackages = pkgs.linuxPackages_xanmod_stable;
     # KERNEL PARAMETER                       | Parameter description
