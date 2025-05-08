@@ -1,6 +1,6 @@
 {
   pkgs,
-  pkgs-davinci,
+  # pkgs-davinci,
   inputs,
   ...
 }: {
@@ -29,11 +29,13 @@
         cloudflare-warp # Goodbye P2P torrent restrictions from my ISP!
         qbittorrent
         pavucontrol
+        mission-center
         # Sneak Peak
         svp
         inkscape
         obs-studio
         cameractrls
+        # davinci-resolve
         # kdePackages.kdenlive
         # Social
         vesktop # Discord
@@ -48,7 +50,7 @@
         # devilutionx # Diablo on steroids BUG: does not build atm
         jetbrains.jdk # OpenJDK does not ship JavaFX for Minecraft
         mcrcon # RCON server for Minecraft servers
-      ] ++ [ pkgs-davinci.davinci-resolve ];
+      ];# ++ [ pkgs-davinci.davinci-resolve ];
     };
   };
 }
