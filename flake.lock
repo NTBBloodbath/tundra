@@ -485,6 +485,22 @@
         "type": "github"
       }
     },
+    "nixpkgs-929116": {
+      "locked": {
+        "lastModified": 1733376361,
+        "narHash": "sha256-aLJxoTDDSqB+/3orsulE6/qdlX6MzDLIITLZqdgMpqo=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "929116e316068c7318c54eb4d827f7d9756d5e9c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "929116e316068c7318c54eb4d827f7d9756d5e9c",
+        "type": "github"
+      }
+    },
     "nixpkgs-darwin": {
       "locked": {
         "lastModified": 1740357648,
@@ -730,6 +746,7 @@
       "inputs": {
         "neovim-nightly-overlay": "neovim-nightly-overlay",
         "nixpkgs": "nixpkgs_2",
+        "nixpkgs-929116": "nixpkgs-929116",
         "norgolith": "norgolith",
         "oskars-dotfiles": "oskars-dotfiles",
         "playit-nixos-module": "playit-nixos-module",
