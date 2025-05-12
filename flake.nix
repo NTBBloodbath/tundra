@@ -11,9 +11,6 @@
     # Nixpkgs unstable
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable&shallow=1";
 
-    # Cry about it Blackmagic, I'm not paying for studio.
-    nixpkgs-929116.url = "github:nixos/nixpkgs/929116e316068c7318c54eb4d827f7d9756d5e9c?shallow=1";
-
     # Playit.gg agent
     playit-nixos-module.url = "github:pedorich-n/playit-nixos-module?shallow=1";
 
@@ -35,24 +32,16 @@
 
   outputs = {
     nixpkgs,
-    nixpkgs-929116,
     neovim-nightly-overlay,
     playit-nixos-module,
     zen-browser,
     norgolith,
     oskars-dotfiles,
     ...
-  } @ inputs:
-  let
-    pkgs-davinci = import nixpkgs-929116 {
-      system = "x86_64-linux";
-      config.allowUnfree = true;
-    };
-  in
-  {
+  } @ inputs: {
     nixosConfigurations.tundra = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
-      specialArgs = {inherit inputs pkgs-davinci;};
+      specialArgs = {inherit inputs;};
       modules = [
         playit-nixos-module.nixosModules.default
         ./nixos/configuration.nix

@@ -1,6 +1,5 @@
 {
   pkgs,
-  # pkgs-davinci,
   inputs,
   ...
 }: {
@@ -32,11 +31,10 @@
         mission-center
         # Sneak Peak
         svp
+        ffmpeg
         inkscape
         obs-studio
         cameractrls
-        # davinci-resolve
-        # kdePackages.kdenlive
         # Social
         vesktop # Discord
         element-desktop # Matrix
@@ -50,7 +48,7 @@
         # devilutionx # Diablo on steroids BUG: does not build atm
         jetbrains.jdk # OpenJDK does not ship JavaFX for Minecraft
         mcrcon # RCON server for Minecraft servers
-      ];# ++ [ pkgs-davinci.davinci-resolve ];
+      ];
     };
   };
 }
