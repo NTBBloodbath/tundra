@@ -6,6 +6,7 @@
 }: let
   binpath = lib.makeBinPath (
     with pkgs; [
+      gcc # Required to compile norg tree-sitter parsers
       lua-language-server
       nil # nix-ls
       stylua
@@ -13,6 +14,11 @@
       lua51Packages.luarocks
     ]
   );
+  # parsers = pkgs.tree-sitter.withPlugins (p: [
+  #   p.tree-sitter-norg
+  #   p.tree-sitter-norg-meta
+  # ]);
+  # vim.opt.runtimepath:append("${parsers}")
   neovimConfig = pkgs.neovimUtils.makeNeovimConfig {
     extraLuaPackages = p: [p.magick]; # I can't have rocks.nvim install it b/c that version will not find imagemagick c binary
     luaRcContent =
