@@ -43,7 +43,7 @@
         vlc # Good old VLC
         spotify # (patched with SpotX through an overlay)
         # godot_4 # Godot engine
-        insomnia # Rest API client
+        yaak # Rest API client
         easyeffects # Audio effects
         # devilutionx # Diablo on steroids BUG: does not build atm
         jetbrains.jdk # OpenJDK does not ship JavaFX for Minecraft
