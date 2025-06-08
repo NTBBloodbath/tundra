@@ -21,6 +21,7 @@
         jujutsu
         penpot-desktop
         # Utilities
+        jq
         inputs.norgolith.packages.x86_64-linux.default
         hyperfine
         wl-clipboard
@@ -39,6 +40,7 @@
         vesktop # Discord
         element-desktop # Matrix
         telegram-desktop # Telegram
+        signal-desktop
         # Misc
         vlc # Good old VLC
         spotify # (patched with SpotX through an overlay)
