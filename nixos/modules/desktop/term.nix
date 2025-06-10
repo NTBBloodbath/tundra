@@ -39,6 +39,7 @@
       unrar
       # Utilities
       fd
+      zf
       eza
       fzf
       btop
