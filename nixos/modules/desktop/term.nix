@@ -37,6 +37,7 @@
       unzip
       rar
       unrar
+      p7zip
       # Utilities
       fd
       zf
