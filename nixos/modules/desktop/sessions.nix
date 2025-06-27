@@ -48,7 +48,6 @@
   ] ++ [
     # --- Niri
     xwayland-satellite # Xwayland
-    hypridle # Idle daemon
     waybar # Statusbar
     mpvpaper # Animated wallpapers from MP4
     rofi-wayland # App launcher
