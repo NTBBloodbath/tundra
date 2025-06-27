@@ -13,13 +13,13 @@
       variant = "";
     };
 
-    # Enable the GNOME Desktop Environment
-    displayManager.gdm.enable = true;
-    desktopManager.gnome.enable = true;
-
     # Disable XTerm
     desktopManager.xterm.enable = false;
   };
+
+  # Enable the GNOME Desktop Environment
+  services.displayManager.gdm.enable = true;
+  services.desktopManager.gnome.enable = true;
 
   # Exclude certain packages from GNOME
   environment.gnome.excludePackages = with pkgs; [
