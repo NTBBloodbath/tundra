@@ -26,6 +26,14 @@
     shellAliases = lib.mkForce {}; # Get rid of these annoying ls aliases
   };
 
+  # Enable NH
+  programs.nh = {
+    enable = true;
+    clean.enable = true;
+    clean.extraArgs = "--keep-since 7d --keep 3";
+    flake = "/home/amartin/tundra";
+  };
+
   # Install system-wide packages (+ FISH shell plugins)
   environment.systemPackages =
     (with pkgs; [
