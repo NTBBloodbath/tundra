@@ -18,7 +18,17 @@ sync-master = ["util", "exec", "--", "bash", "-c", """
 set -euo pipefail
 jj git fetch && jj new master
 """, ""]
+sync-main = ["util", "exec", "--", "bash", "-c", """
+#!/usr/bin/env bash
+set -euo pipefail
+jj git fetch && jj new main
+""", ""]
 
 # [experimental-advance-branches]
 # enabled-branches = ["glob:*"]
 # enabled-branches = ["main", "master"]
+
+tug = ["bookmark", "move", "--from", "closest_bookmark(@)", "--to", "closest_pushable(@)"]
+[revset-aliases]
+'closest_bookmark(to)' = 'heads(::to & bookmarks())'
+'closest_pushable(to)' = 'heads(::to & ~description(exact:"") & (~empty() | merges()))'

@@ -3,39 +3,7 @@
 #--------------------------------------
 bold-is-bright = true
 
-# Sweetie dark theme
-background = #2a2a3a
-foreground = #d3d7de
-selection-background = #25252f
-selection-foreground = #d3d7de
-
-# black
-palette = 0=#25252f
-palette = 8=#707b87
-# red
-palette = 1=#d75f4a
-palette = 9=#d75f4a
-# green
-palette = 2=#89c252
-palette = 10=#89c252
-# yellow
-palette = 3=#e7a06a
-palette = 11=#e7d482
-# blue
-palette = 4=#73a3f3
-palette = 12=#73a3f3
-# purple
-palette = 5=#d087e8
-palette = 13=#b094e2
-# cyan
-palette = 6=#a2c4ff
-palette = 14=#a2c4ff
-# white
-palette = 7=#bdbdbd
-palette = 15=#d3d7de
-
-cursor-color = #73a3f3
-cursor-text = #d3d7de
+theme = dark:sweetie-dark,light:sweetie-light
 
 ###------------------------------------
 ##   Font
@@ -52,6 +20,7 @@ font-family = Martian Mono
 # font-family-italic = CartographCF Nerd Font Mono
 # font-family-bold-italic = CartographCF Nerd Font Mono
 adjust-cell-height = 14%
+# adjust-underline-thickness = 100%
 
 ###------------------------------------
 ##   Cursor

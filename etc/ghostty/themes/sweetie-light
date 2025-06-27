@@ -1,0 +1,34 @@
+background = #dddde7
+foreground = #202030
+selection-background = #18181a
+selection-foreground = #ccccda
+
+# black
+palette = 0=#78789d
+palette = 8=#8989a9
+# red
+palette = 1=#b31919
+palette = 9=#b31919
+# green
+palette = 2=#287f0d
+palette = 10=#287f0d
+# yellow
+palette = 3=#ae580e
+palette = 11=#957d09
+# blue
+palette = 4=#0c5090
+palette = 12=#0c5090
+# purple
+palette = 5=#a00c79
+palette = 13=#9437ff
+# cyan
+palette = 6=#0b658e
+palette = 14=#0b658e
+# white
+palette = 7=#ccccda
+palette = 15=#dddde7
+
+cursor-color = #0c5090
+cursor-text = #dddde7
+
+# vim: ft=conf

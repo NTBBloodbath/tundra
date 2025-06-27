@@ -1,7 +1,11 @@
 function vcs_status
    set -l git_status (git_status)
    set -l jj_status (jj_status)
-   string join " " $git_status $jj_status
+   if test -n "$jj_status"
+      string join " " $jj_status
+   else if test -n "$git_status"
+      string join " " $git_status
+   end
 end
 
 function git_status

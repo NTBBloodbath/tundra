@@ -2,7 +2,7 @@ function fish_prompt
    set -l last_status $status
 
    # First line
-   echo -n (current_dir) (vcs_status) (background_jobs)
+   echo -e -n (current_dir) (vcs_status) (bg_jobs)
    echo
 
    # Second line

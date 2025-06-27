@@ -191,6 +191,7 @@ spawn-at-startup "swaync"
 spawn-at-startup "swayosd-server"
 spawn-at-startup "ghostty"
 spawn-at-startup "xwayland-satellite"
+spawn-at-startup "mpvpaper" "-o" "--loop-playlist" "HDMI-A-1" "~/.local/share/wallpapers/kaguya-card-kaguyasama-love-is-war.mp4"
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
 // If the client will specifically ask for CSD, the request will be honored.
@@ -276,6 +277,17 @@ window-rule {
     match at-startup=true app-id=r#"^Mindustry$"#
     open-on-workspace "gaming"
 }
+
+// layer-rule {
+//     match namespace="^mpvpaper$"
+//
+//     place-within-backdrop true
+// }
+
+// overview {
+//     // zoom 0.6
+//     backdrop-color "#25252f"
+// }
 
 binds {
     // Keys consist of modifiers separated by + signs, followed by an XKB key name
