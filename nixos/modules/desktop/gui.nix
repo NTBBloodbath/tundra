@@ -10,8 +10,9 @@
   };
 
   environment.systemPackages = with pkgs; [
-    # Zen browser
+    # Browsers
     inputs.zen-browser.packages."${system}".default
+    nyxt
     # Utilities
     lact # AMDGPU Controller
     gapless # GTK4 music player
