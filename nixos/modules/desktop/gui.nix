@@ -16,6 +16,7 @@
     # Utilities
     lact # AMDGPU Controller
     gapless # GTK4 music player
+    ente-desktop # Lovely Ente client
     # Office
     libreoffice
     hunspell
