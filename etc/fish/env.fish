@@ -66,8 +66,8 @@ set -Ux LESSHISTFILE "$XDG_STATE_HOME/less/history"
 set -Ux MYSQL_HISTFILE "$XDG_DATA_HOME/mysql_history"
 
 # Terminfo
-set -Ux TERMINFO "$XDG_DATA_HOME/terminfo"
-set -Ux --path TERMINFO_DIRS "$XDG_DATA_HOME/terminfo" /usr/share/terminfo
+# set -Ux TERMINFO "$XDG_DATA_HOME/terminfo"
+# set -Ux --path TERMINFO_DIRS "$XDG_DATA_HOME/terminfo" /usr/share/terminfo
 
 # NodeJS
 set -Ux NODE_REPL_HISTORY "$XDG_DATA_HOME/node_repl_history"
