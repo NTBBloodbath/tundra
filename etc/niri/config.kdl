@@ -97,7 +97,11 @@ layout {
     // - "always", the focused column will always be centered.
     // - "on-overflow", focusing a column will center it if it doesn't fit
     //   together with the previously focused column.
-    center-focused-column "never"
+    center-focused-column "on-overflow"
+
+    // When set, niri will always center a single column on a workspace,
+    // regardless of the `center-focused-column` option.
+    always-center-single-column
 
     // You can customize the widths that "switch-preset-column-width" (Mod+R) toggles between.
     preset-column-widths {
@@ -114,6 +118,9 @@ layout {
 
     // You can also customize the heights that "switch-preset-window-height" (Mod+Shift+R) toggles between.
     // preset-window-heights { }
+
+    // Sets the default display mode for new columns. Can be `normal` or `tabbed`
+    // default-column-display "tabbed"
 
     // You can change the default width of the new windows.
     default-column-width { proportion 0.5; }
@@ -135,20 +142,27 @@ layout {
         off
     }
 
-    // shadow {
-    //     on
-    // }
+    shadow {
+        on
+        softness 30
+        spread 5
+        offset x=10 y=10
+        draw-behind-window true
+    }
 
     // Controls the appearance of the tab indicator that appears next to columns in
     // tabbed display mode.
     tab-indicator {
-        // width 4
-        // length total-proportion=0.5
+        hide-when-single-tab
+        place-within-column
+
+        width 4
+        length total-proportion=0.5
         gap 8 // Half of the general layout gap
         gaps-between-tabs 8
         corner-radius 8
         position "top"
-        place-within-column
+
         active-gradient from="#d087e8" to="#73a3f3" angle=45 //relative-to="workspace-view"
         inactive-gradient from="#303040" to="#798399" angle=45 //relative-to="workspace-view"
     }
@@ -173,25 +187,31 @@ layout {
     // Left and right struts will cause the next window to the side to always be visible.
     // Top and bottom struts will simply add outer gaps in addition to the area occupied by
     // layer-shell panels and regular gaps.
-    struts {
-        // left 64
-        // right 64
-        // top 64
-        // bottom 64
-    }
+    // struts {
+    //     left 64
+    //     right 64
+    //     top 64
+    //     bottom 64
+    // }
 }
 
 // Add lines like this to spawn processes at startup.
 // Note that running niri as a session supports xdg-desktop-autostart,
 // which may be more convenient to use.
 // See the binds section below for more spawn examples.
-spawn-at-startup "waybar"
-spawn-at-startup "swaync"
 // spawn-at-startup "pkexec" "swayosd-libinput-backend" // only required for caps, num and scroll locks
 spawn-at-startup "swayosd-server"
 spawn-at-startup "ghostty"
 spawn-at-startup "xwayland-satellite"
-spawn-at-startup "mpvpaper" "-o" "--loop-playlist" "HDMI-A-1" "~/.local/share/wallpapers/kaguya-card-kaguyasama-love-is-war.mp4"
+// Required for clipboard history integration
+spawn-at-startup "bash" "-c" "wl-paste --watch cliphist store &"
+// Quickshell
+spawn-at-startup "qs" "-c" "DankMaterialShell"
+// Currently, my wallpaper is being managed by quickshell. This swaybg is for a blurred version
+// of my wallpaper so that the overview looks like GNOME
+spawn-at-startup "swaybg" "--mode" "stretch" "--image" "~/.local/share/wallpapers/1387138_blurred.png"
+// spawn-at-startup "swaybg" "--mode" "stretch" "--image" "~/.local/share/wallpapers/1387138.png"
+// spawn-at-startup "mpvpaper" "-o" "--loop-playlist" "HDMI-A-1" "~/.local/share/wallpapers/kaguya-card-kaguyasama-love-is-war.mp4"
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
 // If the client will specifically ask for CSD, the request will be honored.
@@ -203,9 +223,8 @@ prefer-no-csd
 // You can change the path where screenshots are saved.
 // A ~ at the front will be expanded to the home directory.
 // The path is formatted with strftime(3) to give you the screenshot date and time.
-screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
-
 // You can also set this to null to disable saving screenshots to disk.
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 // screenshot-path null
 
 // Animation settings.
@@ -216,7 +235,7 @@ animations {
     // off
 
     // Slow down all animations by this factor. Values below 1 speed them up instead.
-    // slowdown 3.0
+    // slowdown 1.0
 }
 
 // Window rules let you adjust behavior for individual windows.
@@ -225,9 +244,6 @@ animations {
 
 // Open the Firefox picture-in-picture player as floating by default.
 window-rule {
-    // This app-id regular expression will work for both:
-    // - host Firefox (app-id is "firefox")
-    // - Flatpak Firefox (app-id is "org.mozilla.firefox")
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
     open-floating true
 }
@@ -278,43 +294,44 @@ window-rule {
     open-on-workspace "gaming"
 }
 
-// layer-rule {
-//     match namespace="^mpvpaper$"
-//
-//     place-within-backdrop true
-// }
+layer-rule {
+    match namespace="^wallpaper$"
 
-// overview {
-//     // zoom 0.6
-//     backdrop-color "#25252f"
-// }
+    place-within-backdrop true
+}
+
+overview {
+    // zoom 0.8
+    backdrop-color "#25252f"
+
+    workspace-shadow {
+        // off
+        // softness 40
+        // spread 10
+    }
+}
 
 binds {
-    // Keys consist of modifiers separated by + signs, followed by an XKB key name
-    // in the end. To find an XKB name for a particular key, you may use a program
-    // like wev.
-    //
-    // "Mod" is a special modifier equal to Super when running on a TTY, and to Alt
-    // when running as a winit window.
-    //
-    // Most actions that you can bind here can also be invoked programmatically with
-    // `niri msg action do-something`.
-
-    // Mod-Shift-/, which is usually the same as Mod-?,
     // shows a list of important hotkeys.
     Mod+P { show-hotkey-overlay; }
 
-    // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+T { spawn "ghostty"; }
-    Mod+Space { spawn "/home/amartin/.config/rofi/scripts/drun.sh"; }
-    Super+Alt+L { spawn "hyprlock"; }
+
+    // DankMaterialShell keybinds
+    Mod+Space hotkey-overlay-title="Application Launcher" { spawn "qs" "-c" "DankMaterialShell" "ipc" "call" "spotlight" "toggle"; }
+    Super+Alt+L hotkey-overlay-title="Lock Screen" { spawn "qs" "-c" "DankMaterialShell" "ipc" "call" "lock" "lock"; }
+
+    Ctrl+Alt+V hotkey-overlay-title="Clipboard Manager" { spawn "qs" "-c" "DankMaterialShell" "ipc" "call" "clipboard" "toggle"; }
+    Ctrl+Alt+M hotkey-overlay-title="Task Manager" { spawn "qs" "-c" "DankMaterialShell" "ipc" "call" "processlist" "toggle"; }
+    Ctrl+Alt+N hotkey-overlay-title="Notification Center" { spawn "qs" "-c" "DankMaterialShell" "ipc" "call" "notifications" "toggle"; }
+    Ctrl+Alt+Comma hotkey-overlay-title="Settings" { spawn "qs" "-c" "DankMaterialShell" "ipc" "call" "settings" "toggle"; }
 
     // Volume keys mappings for PipeWire & WirePlumber.
     // The allow-when-locked=true property makes them work even when the session is locked.
-    XF86AudioRaiseVolume allow-when-locked=true { spawn "swayosd-client" "--output-volume" "raise"; }
-    XF86AudioLowerVolume allow-when-locked=true { spawn "swayosd-client" "--output-volume" "lower"; }
-    XF86AudioMute        allow-when-locked=true { spawn "swayosd-client" "--output-volume" "mute-toggle"; }
-    XF86AudioMicMute     allow-when-locked=true { spawn "swayosd-client" "--input-volume" "mute-toggle"; }
+    XF86AudioRaiseVolume allow-when-locked=true { spawn "qs" "-c" "DankMaterialShell" "ipc" "call" "audio" "increment" "5"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn "qs" "-c" "DankMaterialShell" "ipc" "call" "audio" "decrement" "5"; }
+    XF86AudioMute        allow-when-locked=true { spawn "qs" "-c" "DankMaterialShell" "ipc" "call" "audio" "mute"; }
+    XF86AudioMicMute     allow-when-locked=true { spawn "qs" "-c" "DankMaterialShell" "ipc" "call" "audio" "micmute"; }
     XF86AudioPlay        allow-when-locked=true { spawn "playerctl" "play-pause"; }
     XF86AudioStop        allow-when-locked=true { spawn "playerctl" "stop"; }
     XF86AudioPrev        allow-when-locked=true { spawn "playerctl" "previous"; }
@@ -322,6 +339,8 @@ binds {
 
     Mod+Q { close-window; }
     Mod+W { toggle-column-tabbed-display; }
+
+    Mod+S { toggle-overview; }
 
     Mod+Left  { focus-column-left; }
     Mod+Down  { focus-window-down; }
@@ -442,25 +461,25 @@ binds {
     Mod+3 { focus-workspace 3; }
     Mod+4 { focus-workspace 4; }
     Mod+5 { focus-workspace 5; }
-    //Mod+6 { focus-workspace 6; }
-    //Mod+7 { focus-workspace 7; }
-    //Mod+8 { focus-workspace 8; }
-    //Mod+9 { focus-workspace 9; }
+    Mod+6 { focus-workspace 6; }
+    Mod+7 { focus-workspace 7; }
+    Mod+8 { focus-workspace 8; }
+    Mod+9 { focus-workspace 9; }
     Mod+Ctrl+1 { move-column-to-workspace 1; }
     Mod+Ctrl+2 { move-column-to-workspace 2; }
     Mod+Ctrl+3 { move-column-to-workspace 3; }
     Mod+Ctrl+4 { move-column-to-workspace 4; }
     Mod+Ctrl+5 { move-column-to-workspace 5; }
-    //Mod+Ctrl+6 { move-column-to-workspace 6; }
-    //Mod+Ctrl+7 { move-column-to-workspace 7; }
-    //Mod+Ctrl+8 { move-column-to-workspace 8; }
-    //Mod+Ctrl+9 { move-column-to-workspace 9; }
+    Mod+Ctrl+6 { move-column-to-workspace 6; }
+    Mod+Ctrl+7 { move-column-to-workspace 7; }
+    Mod+Ctrl+8 { move-column-to-workspace 8; }
+    Mod+Ctrl+9 { move-column-to-workspace 9; }
 
     // Alternatively, there are commands to move just a single window:
     // Mod+Ctrl+1 { move-window-to-workspace 1; }
 
     // Switches focus between the current and the previous workspace.
-    // Mod+Tab { focus-workspace-previous; }
+    Mod+Tab { focus-workspace-previous; }
 
     // The following binds move the focused window in and out of a column.
     // If the window is alone, they will consume it into the nearby column to the side.
@@ -530,6 +549,7 @@ cursor {
 
 hotkey-overlay {
     skip-at-startup
+    // hide-not-bound
 }
 
 environment {

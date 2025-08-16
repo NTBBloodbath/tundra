@@ -1,0 +1,127 @@
+{
+  "themeIndex": 10,
+  "themeIsDynamic": true,
+  "topBarTransparency": 0.95,
+  "topBarWidgetTransparency": 0.9,
+  "popupTransparency": 1,
+  "dockTransparency": 0.8,
+  "use24HourClock": false,
+  "useFahrenheit": false,
+  "nightModeEnabled": false,
+  "weatherLocation": "Caracas, Distrito Capital",
+  "weatherCoordinates": "10.5060934,-66.9146008",
+  "useAutoLocation": false,
+  "weatherEnabled": true,
+  "showLauncherButton": true,
+  "showWorkspaceSwitcher": true,
+  "showFocusedWindow": true,
+  "showWeather": true,
+  "showMusic": true,
+  "showClipboard": true,
+  "showCpuUsage": true,
+  "showMemUsage": true,
+  "showCpuTemp": true,
+  "showGpuTemp": true,
+  "selectedGpuIndex": 0,
+  "enabledGpuPciIds": [],
+  "showSystemTray": true,
+  "showClock": true,
+  "showNotificationButton": true,
+  "showBattery": true,
+  "showControlCenterButton": true,
+  "showWorkspaceIndex": false,
+  "showWorkspacePadding": false,
+  "workspaceNameIcons": {
+    "misc": {
+      "type": "icon",
+      "value": "dashboard"
+    },
+    "dev": {
+      "type": "icon",
+      "value": "terminal"
+    },
+    "social": {
+      "type": "icon",
+      "value": "forum"
+    },
+    "gaming": {
+      "type": "icon",
+      "value": "sports_esports"
+    }
+  },
+  "clockCompactMode": false,
+  "clockDateFormat": "ddd MMM d",
+  "lockDateFormat": "dddd, MMMM d",
+  "mediaSize": 1,
+  "topBarLeftWidgets": [
+    "launcherButton",
+    "workspaceSwitcher",
+    "focusedWindow"
+  ],
+  "topBarCenterWidgets": [
+    {
+      "id": "music",
+      "enabled": true
+    },
+    "clock",
+    "weather"
+  ],
+  "topBarRightWidgets": [
+    {
+      "id": "systemTray",
+      "enabled": true
+    },
+    {
+      "id": "clipboard",
+      "enabled": true
+    },
+    {
+      "id": "memUsage",
+      "enabled": true
+    },
+    {
+      "id": "cpuUsage",
+      "enabled": true
+    },
+    {
+      "id": "gpuTemp",
+      "enabled": true,
+      "selectedGpuIndex": 0,
+      "pciId": "1002:73df"
+    },
+    {
+      "id": "notificationButton",
+      "enabled": true
+    },
+    {
+      "id": "privacyIndicator",
+      "enabled": true
+    },
+    {
+      "id": "controlCenterButton",
+      "enabled": true
+    }
+  ],
+  "appLauncherViewMode": "list",
+  "spotlightModalViewMode": "list",
+  "networkPreference": "auto",
+  "iconTheme": "System Default",
+  "useOSLogo": true,
+  "osLogoColorOverride": "",
+  "osLogoBrightness": 0.5,
+  "osLogoContrast": 1,
+  "wallpaperDynamicTheming": true,
+  "fontFamily": "Adwaita Sans",
+  "monoFontFamily": "MartianMono Nerd Font Mono",
+  "fontWeight": 400,
+  "gtkThemingEnabled": false,
+  "qtThemingEnabled": false,
+  "showDock": true,
+  "dockAutoHide": true,
+  "cornerRadius": 8,
+  "notificationOverlayEnabled": false,
+  "topBarAutoHide": false,
+  "notificationTimeoutLow": 5000,
+  "notificationTimeoutNormal": 5000,
+  "notificationTimeoutCritical": 0
+}

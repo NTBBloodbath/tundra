@@ -1,0 +1,11 @@
+[Unit]
+Description=Change the GTK theme based on the current time.
+After=graphical.target
+Requisite=graphical-session.target
+
+[Service]
+Type=oneshot
+ExecStart=%h/.local/bin/set_gtk_theme.sh
+
+[Install]
+WantedBy=graphical-session.target

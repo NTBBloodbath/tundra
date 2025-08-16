@@ -3,7 +3,7 @@ name = "NTBBloodbath"
 email = "bloodbathalchemist@protonmail.com"
 
 [signing]
-sign-behavior = "own"
+behavior = "own"
 backend = "gpg"
 key = "18D6730BC846AAC5"
 

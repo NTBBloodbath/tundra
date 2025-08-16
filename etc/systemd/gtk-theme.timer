@@ -1,0 +1,9 @@
+[Unit]
+Description=Change the GTK theme based on the current time.
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=1h
+
+[Install]
+WantedBy=timers.target

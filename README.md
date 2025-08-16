@@ -11,7 +11,7 @@ never trip over. And that's how I ended up becoming a NixOS user.
 
 For the time being, I continue to configure my software in the traditional way. Those configurations
 reside in the `etc` directory, and my NixOS configuration resides in the `nixos` directory.
-The `share` directory is self-explanatory.
+Both `bin` and `share` directories are self-explanatory.
 
 ## Installation
 
@@ -39,8 +39,14 @@ cp /etc/nixos/hardware-configuration.nix ./hosts/workstation/
 sudo nixos-rebuild switch --flake .
 ```
 
-Once everything is ready, move the contents of the `etc` directory to `~/.config` and the `share`
-directory to `~/.local/share`. And that's it :)
+> [!IMPORTANT]
+>
+> After the initial setup, `nh os switch ~/tundra` is the recommended way to rebuild the system instead of `nixos-rebuild switch`. No `sudo` required.
+
+Once everything is ready, move the contents of the `etc` directory to `~/.config`, the `share`
+directory to `~/.local/share` and the `bin` directory to `~/.local/bin`.
+
+Additionally, for my Niri setup one must follow the [DankMaterialShell](https://github.com/AvengeMedia/DankMaterialShell) installation instructions. Which is basically cloning the repository, downloading [dgop](https://github.com/AvengeMedia/dgop) to `~/.local/bin`, then calling it a day.
 
 ## Showcase
 
@@ -48,27 +54,6 @@ directory to `~/.local/share`. And that's it :)
 <summary>Desktop view</summary>
 
 ![desktop](https://github.com/user-attachments/assets/9617013a-9223-4af8-8325-523d808d89e0)
-
-</details>
-
-<details>
-<summary>Apps launcher (rofi)</summary>
-
-![2024-08-23-202216_hyprshot](https://github.com/user-attachments/assets/cbc79f29-fe24-4d45-bca1-4437f22ebac8)
-
-</details>
-
-<details>
-<summary>Logout screen (wlogout)</summary>
-
-![wlogout](https://github.com/user-attachments/assets/b1830c65-ac56-45e2-a5f8-514ec3c16eec)
-
-</details>
-
-<details>
-<summary>Lockscreen (hyprlock)</summary>
-
-![hyprlock](https://github.com/user-attachments/assets/7b29b61b-30c7-486a-9924-018f0a4b595c)
 
 </details>
 

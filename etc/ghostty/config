@@ -15,17 +15,19 @@ font-size = 12.5
 # Martian Mono 12.5 - cell height 14%
 # Fira Code Retina 13.5
 # Departure Mono 16.5
-font-family = Martian Mono
+font-family = MartianMono Nerd Font Mono
 # font-family-bold = SFMono Nerd Font
+# font-family-italic = JetBrainsMono Nerd Font
 # font-family-italic = CartographCF Nerd Font Mono
 # font-family-bold-italic = CartographCF Nerd Font Mono
 adjust-cell-height = 14%
 # adjust-underline-thickness = 100%
+font-synthetic-style = bold,italic,bold-italic
 
 ###------------------------------------
 ##   Cursor
 #--------------------------------------
-# bar | block | underline
+# bar | block | block_hollow | underline
 cursor-style = bar
 cursor-style-blink = true
 cursor-invert-fg-bg = true
@@ -64,12 +66,14 @@ confirm-close-surface = false
 copy-on-select = false
 mouse-hide-while-typing = true
 
+shell-integration = detect
 shell-integration-features = cursor,sudo,title
 
 gtk-adwaita = true
 gtk-wide-tabs = true
 # top | bottom | left | right
 gtk-tabs-location = top
+gtk-gsk-renderer = default
 
 ###------------------------------------
 ##   Keybindings

@@ -30,7 +30,6 @@
 
   # Niri, scrollable-tiling Wayland compositor
   programs.niri.enable = true;
-  programs.hyprlock.enable = true;
 
   environment.systemPackages = with pkgs; [
     # --- GNOME additional packages
@@ -48,18 +47,13 @@
   ] ++ [
     # --- Niri
     xwayland-satellite # Xwayland
-    waybar # Statusbar
     quickshell # QuickShell go brr (DankMaterialShell)
     mpvpaper # Animated wallpapers from MP4
-    rofi-wayland # App launcher
     playerctl # Control audio
     swaybg # Wallpaper
-    swaynotificationcenter # Notification daemon and center
-    wlogout # Logout menu
     gammastep # Eye protection, required by DankMaterialShell
     cliphist # Clipboard manager, required by DankMaterialShell
     matugen # Material You color generator, required by DankMaterialShell
-    swayosd # GNOME-like OSD
   ];
 
   # Enable gnome-settings-daemon udev rules to make sure tray works well
