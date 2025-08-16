@@ -22,6 +22,7 @@
         penpot-desktop
         # Utilities
         jq
+        pciutils # lspci
         inputs.norgolith.packages.x86_64-linux.default
         hyperfine
         wl-clipboard
