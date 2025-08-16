@@ -49,14 +49,16 @@
     # --- Niri
     xwayland-satellite # Xwayland
     waybar # Statusbar
-    quickshell # QuickShell go brr
+    quickshell # QuickShell go brr (DankMaterialShell)
     mpvpaper # Animated wallpapers from MP4
     rofi-wayland # App launcher
     playerctl # Control audio
     swaybg # Wallpaper
     swaynotificationcenter # Notification daemon and center
     wlogout # Logout menu
-    wlsunset # Eye protection
+    gammastep # Eye protection, required by DankMaterialShell
+    cliphist # Clipboard manager, required by DankMaterialShell
+    matugen # Material You color generator, required by DankMaterialShell
     swayosd # GNOME-like OSD
   ];
 
