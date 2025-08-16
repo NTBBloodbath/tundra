@@ -49,6 +49,7 @@
     # --- Niri
     xwayland-satellite # Xwayland
     waybar # Statusbar
+    quickshell # QuickShell go brr
     mpvpaper # Animated wallpapers from MP4
     rofi-wayland # App launcher
     playerctl # Control audio
