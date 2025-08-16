@@ -25,8 +25,9 @@
 
   nix = {
     # Perform garbage collection weekly to maintain low disk usage
+    # NOTE: superseded by NH clean
     gc = {
-      automatic = true;
+      automatic = false;
       dates = "weekly";
       options = "--delete-older-than 14d";
       randomizedDelaySec = "10m";
