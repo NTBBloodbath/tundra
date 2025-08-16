@@ -53,7 +53,9 @@ Additionally, for my Niri setup one must follow the [DankMaterialShell](https://
 <details>
 <summary>Desktop view</summary>
 
-![desktop](https://github.com/user-attachments/assets/9617013a-9223-4af8-8325-523d808d89e0)
+  <img width="1920" height="1080" alt="Desktop with fastfetch and cava" src="https://github.com/user-attachments/assets/dad04ea9-4d14-4a0d-aa5a-25bc7a0c1f2d" />
+
+  <img width="1920" height="1080" alt="Overview" src="https://github.com/user-attachments/assets/61fd3c02-3581-4273-a88e-bdd8c66b89ba" />
 
 </details>
 
