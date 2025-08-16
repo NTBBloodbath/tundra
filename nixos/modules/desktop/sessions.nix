@@ -56,6 +56,7 @@
     swaybg # Wallpaper
     swaynotificationcenter # Notification daemon and center
     wlogout # Logout menu
+    wlsunset # Eye protection
     swayosd # GNOME-like OSD
   ];
 
