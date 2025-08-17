@@ -44,6 +44,8 @@
         signal-desktop
         # Misc
         vlc # Good old VLC
+        cava # Terminal audio visualizer
+        rmpc # Terminal music player
         spotify # (patched with SpotX through an overlay)
         # godot_4 # Godot engine
         yaak # Rest API client
