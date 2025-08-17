@@ -59,6 +59,7 @@
       lm_sensors
       smartmontools
       # Misc
+      libnotify
       fastfetch
     ])
     ++ (with pkgs.fishPlugins; [
