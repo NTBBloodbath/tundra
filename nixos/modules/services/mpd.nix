@@ -12,7 +12,7 @@
 
     musicDirectory = "/mnt/Storage/Music";
     playlistDirectory = "/mnt/Storage/Playlists";
-    # network.listenAddress = "any";
+    network.listenAddress = "any";
 
     extraConfig = ''
       audio_output {
