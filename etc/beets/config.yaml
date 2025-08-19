@@ -1,0 +1,42 @@
+directory: /mnt/Storage/Music
+library: /mnt/Storage/Music/library.db
+
+import:
+  copy: yes
+  move: no
+  write: yes
+  bell: yes
+  incremental: yes
+
+plugins: lastgenre fetchart embedart ftintitle mpdupdate smartplaylist replaygain lyrics edit scrub info hook
+
+embedart:
+  auto: yes
+
+mpd:
+  host: localhost
+  port: 6600
+
+replaygain:
+  backend: gstreamer
+  auto: yes
+  overwrite: yes
+
+lyrics:
+  auto: yes
+  sources: [lrclib]
+  synced: yes
+
+smartplaylist:
+  relative_to: /mnt/Storage/Music
+  playlist_dir: /mnt/Storage/Playlists
+  forward_slash: no
+  playlists:
+    - name: rock_metal.m3u
+      query: ['genre:rock', 'genre:metal']
+
+# TODO: create extract_song_lyrics.sh instead
+# hook:
+#   hooks:
+#     - event: after_write
+#       command: ~/.config/rmpc/scripts/extract_album_lyrics.sh "{item.path}"

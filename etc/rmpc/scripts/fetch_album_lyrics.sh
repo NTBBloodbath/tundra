@@ -2,7 +2,7 @@
 set -euo pipefail
 
 # Usage: fetch_album_lyrics_simple.sh "/path/to/Artist/Album"
-# Example: fetch_album_lyrics_simple.sh "$HOME/Music/mpd/Anderson .Paak/Ventura"
+# Example: fetch_album_lyrics_simple.sh "$HOME/Music/Black\ Light\ Burns/Cruel\ Melody"
 #
 # Stolen from https://github.com/ericmckevitt/rmpc-config/blob/main/utils/fetch_album_lyrics.sh
 # and modified to fit my music library organization and file format. All credits belong to ericmckevitt.
@@ -10,19 +10,19 @@ set -euo pipefail
 LRCLIB_API="https://lrclib.net/api/get"
 
 if [ $# -ne 1 ]; then
-    echo "Usage: $0 \"/path/to/Artist - Album (date)\""
+    echo "Usage: $0 \"/path/to/Artist/Album\""
     exit 1
 fi
 
-# e.g., 'Rauw Alejandro - Saturno (2023)'
+# e.g., 'Rauw\ Alejandro/Saturno'
 ALBUM_DIR="$1"
 if [ ! -d "$ALBUM_DIR" ]; then
     echo "Error: '$ALBUM_DIR' is not a directory."
     exit 1
 fi
 
-ARTIST="$(echo "$(basename "$ALBUM_DIR")" | awk -F" - " '{ print $1 }')"
-ALBUM="$(echo "$(basename "$ALBUM_DIR")" | sed "s/\s([0-9]*)//" | awk -F" - " '{ print $2 }')"
+ARTIST="$(basename "$ALBUM_DIR")"
+ALBUM="$(basename "$ARTIST")"
 
 # All my music albums contain either FLAC or MP3 files, they are not mixed.
 # Therefore, running a loop for both file formats is safe.
@@ -93,7 +93,7 @@ fetch_for_plain() {
 
     # 3. If still empty/null → skip
     if [ -z "$lyrics" ] || [ "$lyrics" == "null" ]; then
-        echo "✗ No lyrics for: \"$title_try\""
+        echo " No lyrics for: \"$title_try\""
         return 1
     fi
 
@@ -101,18 +101,18 @@ fetch_for_plain() {
     #    We drop any existing [ar:], [al:], [ti:] lines from the API payload,
     #    but typically lrclib returns only timestamped lines anyway.
     echo "$lyrics" | sed -E '/^\[(ar|al|ti):/d' > "$out_lrc"
-    echo "✔ Saved lyrics: $(basename "$out_lrc")"
+    echo " Saved lyrics: $(basename "$out_lrc")"
     return 0
 }
 
-echo "▶ Fetching lyrics for all .$FILE_FORMAT in: $ALBUM_DIR"
+echo " Fetching lyrics for all .$FILE_FORMAT in: $ALBUM_DIR"
 echo "  Artist: $ARTIST"
 echo "  Album:  $ALBUM"
 echo
 
 shopt -s nullglob
 for file in "$ALBUM_DIR"/*."$FILE_FORMAT"; do
-    TITLE_RAW="$(echo "$(basename "$file" ."$FILE_FORMAT")" | sed "s/[0-9]*\s-\s//")"
+    TITLE_RAW="$(echo "$(basename "$file" ."$FILE_FORMAT")" | sed "s/[0-9]*\s//")"
     LRC_FILE="${file%.$FILE_FORMAT}.lrc"
 
     if [ -f "$LRC_FILE" ]; then

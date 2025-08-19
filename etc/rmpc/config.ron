@@ -16,6 +16,7 @@
     enable_config_hot_reload: true,
     status_update_interval_ms: 1000,
     rewind_to_start_sec: None,
+    show_playlists_in_browser: All,
     reflect_changes_to_playlist: false,
     select_current_song_on_change: true,
     center_current_song_on_change: true,
