@@ -11,6 +11,7 @@
     user = "amartin";
 
     musicDirectory = "/mnt/Storage/Music";
+    playlistDirectory = "/mnt/Storage/Playlists";
     # network.listenAddress = "any";
 
     extraConfig = ''
