@@ -34,8 +34,9 @@
     XDG_RUNTIME_DIR = "/run/user/1000";
   };
 
-  # So that tools like Playerctl are able to interact with MPD
   environment.systemPackages = [
+    pkgs.beets
+    # So that tools like Playerctl are able to interact with MPD
     pkgs.mpdris2 # MPRIS 2 support for mpd
   ];
 }

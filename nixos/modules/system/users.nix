@@ -42,14 +42,15 @@
         element-desktop # Matrix
         telegram-desktop # Telegram
         signal-desktop
-        # Misc
+        # Multimedia
         vlc # Good old VLC
         cava # Terminal audio visualizer
         rmpc # Terminal music player
         spotify # (patched with SpotX through an overlay)
+        easyeffects # Audio effects
+        # Misc
         # godot_4 # Godot engine
         yaak # Rest API client
-        easyeffects # Audio effects
         # devilutionx # Diablo on steroids BUG: does not build atm
         jetbrains.jdk # OpenJDK does not ship JavaFX for Minecraft
         mcrcon # RCON server for Minecraft servers
