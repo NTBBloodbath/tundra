@@ -34,9 +34,10 @@
     XDG_RUNTIME_DIR = "/run/user/1000";
   };
 
-  environment.systemPackages = [
-    pkgs.beets
+  environment.systemPackages = with pkgs; [
+    beets
+    beetsPackages.copyartifacts # Copy non-music files during import
     # So that tools like Playerctl are able to interact with MPD
-    pkgs.mpdris2 # MPRIS 2 support for mpd
+    mpdris2 # MPRIS 2 support for mpd
   ];
 }
