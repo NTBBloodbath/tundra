@@ -15,10 +15,21 @@
     network.listenAddress = "any";
 
     extraConfig = ''
+      # Cava visualizer
       audio_output {
         type   "fifo"
         name   "mpd_fifo"
         path   "/tmp/mpd.fifo"
+        format "44100:16:2"
+      }
+
+      # HTTP Streaming (MAFA)
+      audio_output {
+        type "httpd"
+        name "HTTP Stream"
+        encoder "lame" # optional
+        port "8006"
+        bitrate "128000"
         format "44100:16:2"
       }
 
