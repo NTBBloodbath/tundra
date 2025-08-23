@@ -49,8 +49,8 @@
         spotify # (patched with SpotX through an overlay)
         easyeffects # Audio effects
         # Misc
-        # godot_4 # Godot engine
         yaak # Rest API client
+        newsflash # Modern feed reader (GTK4)
         # devilutionx # Diablo on steroids BUG: does not build atm
         jetbrains.jdk # OpenJDK does not ship JavaFX for Minecraft
         mcrcon # RCON server for Minecraft servers
