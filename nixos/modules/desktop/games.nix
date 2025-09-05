@@ -20,7 +20,5 @@
     mangohud # Performance monitoring
     mindustry-wayland # Mindustry
     osu-lazer-bin # Osu! my beloved
-    duckstation # PSX emulator, long live Symphony of the Night
-    ppsspp
   ];
 }
