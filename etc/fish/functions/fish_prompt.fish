@@ -6,7 +6,7 @@ function fish_prompt
    echo
 
    # Second line
-   echo -n (nix_shell) (rust_version) (elixir_version) (command_timer) (prompt_symbol $last_status)
+   echo -n (nix_shell) (zig_version) (rust_version) (elixir_version) (command_timer) (prompt_symbol $last_status)
 end
 
 # vim: sw=3:ts=3:sts=3:ft=fish:fdm=marker:fdl=0

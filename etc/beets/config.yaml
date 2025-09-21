@@ -8,9 +8,12 @@ import:
   bell: yes
   incremental: yes
 
-plugins: lastgenre fetchart embedart ftintitle mpdupdate smartplaylist replaygain lyrics edit scrub info hook
+plugins: lastgenre fetchart embedart thumbnails ftintitle mpdupdate smartplaylist replaygain lyrics edit scrub info hook
 
 embedart:
+  auto: yes
+
+thumbnails:
   auto: yes
 
 mpd:

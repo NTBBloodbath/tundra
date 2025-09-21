@@ -1,15 +1,15 @@
 {
-  "themeIndex": 10,
-  "themeIsDynamic": true,
+  "currentThemeName": "dynamic",
+  "customThemeFile": "",
   "topBarTransparency": 0.9,
-  "topBarWidgetTransparency": 0.8,
+  "topBarWidgetTransparency": 0.85,
   "popupTransparency": 1,
-  "dockTransparency": 0.8,
+  "dockTransparency": 0.85,
   "use24HourClock": false,
   "useFahrenheit": false,
   "nightModeEnabled": false,
-  "weatherLocation": "Distrito Capital",
-  "weatherCoordinates": "10.4749543,-66.9708041",
+  "weatherLocation": "10.5, -66.9",
+  "weatherCoordinates": "10.5,-66.9",
   "useAutoLocation": false,
   "weatherEnabled": true,
   "showLauncherButton": true,
@@ -29,8 +29,14 @@
   "showNotificationButton": true,
   "showBattery": true,
   "showControlCenterButton": true,
+  "controlCenterShowNetworkIcon": true,
+  "controlCenterShowBluetoothIcon": true,
+  "controlCenterShowAudioIcon": true,
   "showWorkspaceIndex": false,
   "showWorkspacePadding": false,
+  "showWorkspaceApps": false,
+  "maxWorkspaceIcons": 3,
+  "workspacesPerMonitor": true,
   "workspaceNameIcons": {
     "misc": {
       "type": "icon",
@@ -49,14 +55,27 @@
       "value": "sports_esports"
     }
   },
+  "waveProgressEnabled": true,
   "clockCompactMode": false,
+  "focusedWindowCompactMode": true,
+  "runningAppsCompactMode": true,
+  "runningAppsCurrentWorkspace": true,
   "clockDateFormat": "ddd MMM d",
   "lockDateFormat": "dddd, MMMM d",
   "mediaSize": 1,
   "topBarLeftWidgets": [
-    "launcherButton",
-    "workspaceSwitcher",
-    "focusedWindow"
+    {
+      "id": "launcherButton",
+      "enabled": true
+    },
+    {
+      "id": "workspaceSwitcher",
+      "enabled": true
+    },
+    {
+      "id": "focusedWindow",
+      "enabled": true
+    }
   ],
   "topBarCenterWidgets": [
     {
@@ -80,7 +99,7 @@
       "enabled": true
     },
     {
-      "id": "cpuUsage",
+      "id": "cpuTemp",
       "enabled": true
     },
     {
@@ -104,7 +123,7 @@
   ],
   "appLauncherViewMode": "list",
   "spotlightModalViewMode": "list",
-  "networkPreference": "auto",
+  "networkPreference": "ethernet",
   "iconTheme": "System Default",
   "useOSLogo": true,
   "osLogoColorOverride": "",
@@ -114,14 +133,29 @@
   "fontFamily": "Adwaita Sans",
   "monoFontFamily": "MartianMono Nerd Font Mono",
   "fontWeight": 400,
+  "fontScale": 1,
+  "notepadUseMonospace": true,
+  "notepadFontFamily": "",
+  "notepadFontSize": 14,
   "gtkThemingEnabled": false,
   "qtThemingEnabled": false,
   "showDock": true,
   "dockAutoHide": true,
-  "cornerRadius": 8,
+  "cornerRadius": 12,
   "notificationOverlayEnabled": false,
   "topBarAutoHide": false,
+  "topBarOpenOnOverview": false,
+  "topBarVisible": true,
+  "topBarSpacing": 0,
+  "topBarBottomGap": 0,
+  "topBarInnerPadding": 8,
+  "topBarSquareCorners": true,
+  "topBarNoBackground": false,
+  "topBarGothCornersEnabled": true,
+  "lockScreenShowPowerActions": true,
+  "hideBrightnessSlider": true,
   "notificationTimeoutLow": 5000,
   "notificationTimeoutNormal": 5000,
-  "notificationTimeoutCritical": 0
+  "notificationTimeoutCritical": 0,
+  "screenPreferences": {}
 }
